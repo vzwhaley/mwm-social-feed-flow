@@ -71,6 +71,13 @@ export function renderTemplate({ templatePath, replacements, outPath }) {
         const logo = `data:image/png;base64,${readFileSync(logoPath).toString('base64')}`;
         html = html.replaceAll('{{MWM_LOGO_SRC}}', logo);
     }
+    // Spantaran is EXCLUSIVELY the Moon Whale Media company font: templates use
+    // it for moonwhale.media / "by moon whale media, llc" references only.
+    if (html.includes('{{SPANTARAN_SRC}}')) {
+        const fontPath = join(REPO_ROOT, 'brands', 'moonwhalemedia', 'assets', 'Spantaran.ttf');
+        const font = `data:font/ttf;base64,${readFileSync(fontPath).toString('base64')}`;
+        html = html.replaceAll('{{SPANTARAN_SRC}}', font);
+    }
     return screenshotHtml(html, outPath);
 }
 

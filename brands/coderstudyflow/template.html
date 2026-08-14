@@ -6,6 +6,7 @@
     /* 1080x1080 social card - CoderStudyFlow terminal-amber house style.
        Fonts: system monospace stack for the scaffold; swap in JetBrains Mono
        as a base64 @font-face for pixel-parity with the site (see mwm-brand). */
+    @font-face { font-family: Spantaran; src: url({{SPANTARAN_SRC}}); }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 1080px; height: 1080px; }
     body {
@@ -50,7 +51,8 @@
     .wordmark { font-size: 30px; font-weight: bold; color: #f8fafc; }
     .wordmark .flow { color: #f59e0b; }
     .wordmark .tm { font-size: 16px; vertical-align: super; }
-    .tagline { color: #64748b; font-size: 17px; margin-top: 2px; }
+    /* "by moon whale media, llc" = company reference -> Spantaran. */
+    .tagline { font-family: Spantaran, 'Segoe UI', sans-serif; letter-spacing: .05em; color: #64748b; font-size: 16px; margin-top: 3px; }
     .footer-right { display: flex; align-items: center; gap: 18px; }
     .url { color: #fbbf24; font-size: 26px; font-weight: bold; }
     .mwm-logo { width: 80px; height: 80px; border-radius: 50%; box-shadow: 0 4px 18px rgba(0,0,0,.5); }

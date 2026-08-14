@@ -6,6 +6,7 @@
     /* 1080x1080 product-promo card - Moon Whale Media master brand.
        Product accent color is injected as {{ACCENT}}; the homepage screenshot
        is embedded as a data URI in a mock browser window. */
+    @font-face { font-family: Spantaran; src: url({{SPANTARAN_SRC}}); }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html, body { width: 1080px; height: 1080px; }
     body {
@@ -63,7 +64,8 @@
     .mwm { color: #f8fafc; font-size: 24px; font-weight: 700; }
     .mwm-tag { color: #64748b; font-size: 16px; margin-top: 2px; }
     .footer-right { display: flex; align-items: center; gap: 18px; }
-    .site { color: #94a3b8; font-size: 22px; }
+    /* moonwhale.media = company reference -> Spantaran (MWM-exclusive font). */
+    .site { font-family: Spantaran, 'Segoe UI', sans-serif; letter-spacing: .05em; color: #94a3b8; font-size: 22px; }
     .mwm-logo { width: 88px; height: 88px; border-radius: 50%; box-shadow: 0 4px 18px rgba(0,0,0,.5); }
 </style>
 </head>
