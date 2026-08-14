@@ -670,8 +670,8 @@
             "url": "https://thecardbackcantina.com",
             "tagline": "Toy & Comic Catalog + Collection Tracker",
             "screenshot": "brands/moonwhalemedia/assets/thecardbackcantina-home.png",
-            "capture_url": null,
-            "_notes": "Dev site currently 500s on every page - capture_url disabled so this product stays out of rotation until the app is fixed and a real screenshot exists.",
+            "capture_url": "https://thecardbackcantina.test",
+            "_notes": "Dev site fixed 2026-08-14 (Herd php memory_limit 128M->512M); recapture from the live domain after launch.",
             "hashtags": "#ActionFigures #ToyCollector #ComicCollecting #Collectibles",
             "promos": [
                 {
