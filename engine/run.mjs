@@ -136,13 +136,24 @@ if ((config.type ?? 'quiz') === 'promo') {
     const mime = extname(shotPath) === '.jpg' ? 'image/jpeg' : 'image/png';
     const shotSrc = `data:${mime};base64,${readFileSync(shotPath).toString('base64')}`;
 
+    // Card header: the product's OFFICIAL logo lockup when one exists (each
+    // site's real brand art, on a white chip if the lockup is ink-colored);
+    // otherwise the text wordmark fallback (CoderStudyFlow's actual brand).
+    let logoHtml;
+    if (product.logo && existsSync(join(ROOT, product.logo))) {
+        const logoSrc = `data:image/png;base64,${readFileSync(join(ROOT, product.logo)).toString('base64')}`;
+        const img = `<img class="product-logo" src="${logoSrc}" alt="">`;
+        logoHtml = product.logo_chip ? `<span class="logo-chip">${img}</span>` : img;
+    } else {
+        logoHtml = `<div class="wordmark">${escapeHtml(product.wordmark[0])}<span class="accent">${escapeHtml(product.wordmark[1])}</span><span class="tm">&trade;</span></div>`;
+    }
+
     renderTemplate({
         templatePath: join(ROOT, config.template),
         outPath: imagePath,
         replacements: {
             ACCENT: product.accent,
-            WORDMARK_A: escapeHtml(product.wordmark[0]),
-            WORDMARK_B: escapeHtml(product.wordmark[1]),
+            PRODUCT_LOGO_HTML: logoHtml,
             TAGLINE: escapeHtml(promo.title ?? product.tagline),
             DISPLAY_URL: escapeHtml(product.url.replace(/^https?:\/\//, '')),
             SCREENSHOT_SRC: shotSrc,

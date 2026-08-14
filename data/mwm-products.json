@@ -203,7 +203,9 @@
                     "screenshot": "brands/moonwhalemedia/assets/newsroomflow-pricing.png",
                     "capture_url": "https://newsroomflow.test/pricing"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/newsroomflow.png",
+            "logo_chip": true
         },
         {
             "key": "astrologerflow",
@@ -437,7 +439,8 @@
                     "title": "No Two Readings Alike - Real Astronomy, Personal Prose",
                     "blurb": "Positions come from a real VSOP87 ephemeris validated to within 1 arc-minute of the Swiss Ephemeris, then a per-user phrase engine (optionally refined by Claude) writes your reading - so two people with identical charts still get different words. Rigor underneath, poetry on top. 💫"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/astrologerflow.png"
         },
         {
             "key": "filemanagerflow",
@@ -552,7 +555,9 @@
                     "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-beta.png",
                     "capture_url": "http://filemanagerflow.test/beta"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/filemanagerflow.png",
+            "logo_chip": true
         },
         {
             "key": "myemergencyscreen",
@@ -653,7 +658,8 @@
                     "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-about.png",
                     "capture_url": "https://myemergencyscreen.test/about"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/myemergencyscreen.png"
         },
         {
             "key": "thecardbackcantina",
@@ -745,7 +751,8 @@
                     "title": "Free Forever. Pro from $4.99. Lifetime $149.",
                     "blurb": "Catalog, track up to 50 items, and share for free. Go Pro for $4.99/mo or $49/yr - or pay $149 once for Lifetime - to unlock unlimited tracking, gap analysis, reports, and an ad-free experience. 💙"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/thecardbackcantina.png"
         },
         {
             "key": "socialstashflow",
@@ -854,7 +861,8 @@
                     "screenshot": "brands/moonwhalemedia/assets/socialstashflow-register.png",
                     "capture_url": "https://socialstashflow.test/register"
                 }
-            ]
+            ],
+            "logo": "brands/moonwhalemedia/assets/logos/socialstashflow.png"
         }
     ]
 }

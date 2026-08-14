@@ -15,13 +15,23 @@
         padding: 52px 60px 36px;
     }
     .head { text-align: center; }
+    /* Text-wordmark fallback (used only when a product has no official logo
+       asset - e.g. CoderStudyFlow, whose brand IS this monospace lockup). */
     .wordmark {
         font-size: 62px; font-weight: 800; letter-spacing: -1px; color: #f8fafc;
         font-family: Consolas, 'JetBrains Mono', monospace;
     }
     .wordmark .accent { color: {{ACCENT}}; }
     .wordmark .tm { font-size: 26px; vertical-align: super; }
-    .tagline { margin-top: 10px; color: #94a3b8; font-size: 30px; }
+    /* Official product logo lockup (each site's real brand art). Ink-colored
+       lockups sit on a white chip so they read on the dark card. */
+    .product-logo { display: inline-block; max-height: 120px; max-width: 840px; object-fit: contain; }
+    .logo-chip {
+        display: inline-block; background: #ffffff; border-radius: 20px;
+        padding: 16px 34px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .logo-chip .product-logo { max-height: 96px; }
+    .tagline { margin-top: 12px; color: #94a3b8; font-size: 30px; }
     .browser {
         margin-top: 40px; flex: 1; display: flex; flex-direction: column;
         background: #1e293b; border: 1px solid #334155; border-radius: 20px;
@@ -59,7 +69,7 @@
 </head>
 <body>
     <div class="head">
-        <div class="wordmark">{{WORDMARK_A}}<span class="accent">{{WORDMARK_B}}</span><span class="tm">&trade;</span></div>
+        {{PRODUCT_LOGO_HTML}}
         <p class="tagline">{{TAGLINE}}</p>
     </div>
 
