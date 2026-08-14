@@ -82,12 +82,38 @@ state/coderstudyflow.json           # used-question hashes (committed by CI)
 out/                                # rendered images (gitignored)
 ```
 
-## Adding another brand (AstrologerFlow, etc.)
+## The promo campaign (Moon Whale Media page)
 
-1. Product side: add an exporter that emits the same record shape
-   (`question`-like content + `hash` + `answer_url`/`link`).
-2. Here: `brands/<slug>/config.json` + `brands/<slug>/template.html`.
-3. Add the brand to the workflow matrix and its secrets.
+`brands/moonwhalemedia` is a `type: "promo"` campaign: every MWM product
+carries a **stack of promos** in `data/mwm-products.json` — one overview plus
+feature drill-downs, each with its own card title, caption blurb, and
+optionally its own page screenshot (pricing page, guides page, ...), so the
+images vary as much as the copy. The card is the product wordmark + a mock
+browser window framing a real page screenshot + an accent CTA band + the
+Moon Whale Media footer.
+
+**No-repeat picker:** a promo that posted within `cooldown_days` (5) is
+ineligible, and the same product never posts twice in a row. State keeps the
+post history; if every promo is somehow inside the cooldown, the
+least-recently-posted one runs rather than nothing.
+
+**Screenshots:** `node tools/capture-homes.mjs` captures every product home +
+every promo-specific page (from `capture_url` — currently the Herd dev hosts,
+since the production domains are not live yet). Products with no reachable
+site are skipped automatically until their screenshot exists. **Recapture from
+the LIVE domains after each product launches** (dev captures can show the
+dev-only ad placeholder), then commit the new PNGs.
+
+Growing the deck = editing `data/mwm-products.json` — add promos freely; more
+promos means longer before anything repeats.
+
+## Adding another brand / campaign
+
+1. Content source: a `quiz` brand needs an exporter emitting the question
+   record shape (`question` + `hash` + `answer_url`); a `promo` brand needs a
+   product entry (with promos) in a data file.
+2. Here: `brands/<slug>/config.json` (+ template if the look differs).
+3. Add the brand to the workflow matrix and its `<BRAND>_FB_*` secrets.
 
 **PRIVATE REPO.** `data/*.json` is proprietary question-bank content
 (© Moon Whale Media, LLC) — this repository must never be public.

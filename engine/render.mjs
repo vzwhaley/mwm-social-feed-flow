@@ -22,37 +22,17 @@ export function findChrome() {
     throw new Error('Chrome not found. Set CHROME_BIN to the browser executable.');
 }
 
-const escapeHtml = (s) =>
+export const escapeHtml = (s) =>
     String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/** Fill the template with a question record and screenshot it. */
-export function renderQuestionCard({ templatePath, record, outPath }) {
-    let html = readFileSync(templatePath, 'utf8');
-
-    const letters = ['A', 'B', 'C', 'D'];
-    const choicesHtml = record.choices
-        .map((c, i) =>
-            `<div class="choice"><span class="letter">${letters[i]})</span><span>${escapeHtml(c.text)}</span></div>`)
-        .join('\n                ');
-
-    const codeBlock = record.code
-        ? `<div class="code">${escapeHtml(record.code)}</div>`
-        : '';
-
-    html = html
-        .replaceAll('{{TITLE}}', escapeHtml(`${record.track} · ${record.category ?? 'Practice'} · ${record.difficulty}`))
-        .replaceAll('{{QUESTION}}', escapeHtml(record.question))
-        .replaceAll('{{CODE_BLOCK}}', codeBlock)
-        .replaceAll('{{CHOICES}}', choicesHtml);
-
-    const tmpHtml = join(tmpdir(), `mwm-social-${Date.now()}.html`);
+function screenshotHtml(html, outPath) {
+    const tmpHtml = join(tmpdir(), `mwm-social-${Date.now()}-${Math.floor(Math.random() * 1e6)}.html`);
     writeFileSync(tmpHtml, html, 'utf8');
 
     mkdirSync(resolve(outPath, '..'), { recursive: true });
 
-    // Legacy --headless renders transparent/custom backgrounds more reliably
-    // (house lesson from the NewsroomFlow logo renders); solid bg here, so
-    // --headless=new is fine everywhere, but keep flags conservative.
+    // Legacy --headless renders custom backgrounds more reliably (house lesson
+    // from the NewsroomFlow logo renders); keep flags conservative.
     execFileSync(findChrome(), [
         '--headless',
         '--disable-gpu',
@@ -69,4 +49,37 @@ export function renderQuestionCard({ templatePath, record, outPath }) {
         throw new Error(`Rendered image suspiciously small (${size} bytes): ${outPath}`);
     }
     return outPath;
+}
+
+/**
+ * Generic template render: fill {{PLACEHOLDER}}s and screenshot the result.
+ * NO escaping is applied here - the caller escapes text values (raw HTML like
+ * data-URI <img> sources must pass through untouched).
+ */
+export function renderTemplate({ templatePath, replacements, outPath }) {
+    let html = readFileSync(templatePath, 'utf8');
+    for (const [key, value] of Object.entries(replacements)) {
+        html = html.replaceAll(`{{${key}}}`, value);
+    }
+    return screenshotHtml(html, outPath);
+}
+
+/** Quiz campaign: fill the template with a question record and screenshot it. */
+export function renderQuestionCard({ templatePath, record, outPath }) {
+    const letters = ['A', 'B', 'C', 'D'];
+    const choicesHtml = record.choices
+        .map((c, i) =>
+            `<div class="choice"><span class="letter">${letters[i]})</span><span>${escapeHtml(c.text)}</span></div>`)
+        .join('\n                ');
+
+    return renderTemplate({
+        templatePath,
+        outPath,
+        replacements: {
+            TITLE: escapeHtml(`${record.track} · ${record.category ?? 'Practice'} · ${record.difficulty}`),
+            QUESTION: escapeHtml(record.question),
+            CODE_BLOCK: record.code ? `<div class="code">${escapeHtml(record.code)}</div>` : '',
+            CHOICES: choicesHtml,
+        },
+    });
 }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    /* 1080x1080 product-promo card - Moon Whale Media master brand.
+       Product accent color is injected as {{ACCENT}}; the homepage screenshot
+       is embedded as a data URI in a mock browser window. */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1080px; }
+    body {
+        background: #0f172a;
+        font-family: 'Segoe UI', -apple-system, Arial, sans-serif;
+        display: flex; flex-direction: column;
+        padding: 52px 60px 36px;
+    }
+    .head { text-align: center; }
+    .wordmark {
+        font-size: 62px; font-weight: 800; letter-spacing: -1px; color: #f8fafc;
+        font-family: Consolas, 'JetBrains Mono', monospace;
+    }
+    .wordmark .accent { color: {{ACCENT}}; }
+    .wordmark .tm { font-size: 26px; vertical-align: super; }
+    .tagline { margin-top: 10px; color: #94a3b8; font-size: 30px; }
+    .browser {
+        margin-top: 40px; flex: 1; display: flex; flex-direction: column;
+        background: #1e293b; border: 1px solid #334155; border-radius: 20px;
+        overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,.5);
+    }
+    .bar {
+        display: flex; align-items: center; gap: 10px;
+        background: #0b1220; border-bottom: 1px solid #334155; padding: 16px 22px;
+    }
+    .dot { width: 16px; height: 16px; border-radius: 50%; }
+    .dot.r { background: #f43f5e; } .dot.y { background: #fbbf24; } .dot.g { background: #10b981; }
+    .addr {
+        flex: 1; margin-left: 10px; background: #1e293b; border: 1px solid #334155;
+        border-radius: 999px; padding: 8px 20px; color: #94a3b8; font-size: 22px;
+        font-family: Consolas, monospace; white-space: nowrap; overflow: hidden;
+    }
+    .addr .lock { color: #10b981; }
+    .shot { flex: 1; overflow: hidden; background: #ffffff; }
+    .shot img { width: 100%; display: block; }
+    .cta {
+        margin-top: 34px; text-align: center;
+        background: {{ACCENT}}; border-radius: 16px; padding: 22px;
+        color: #0f172a; font-size: 34px; font-weight: 800;
+    }
+    .footer {
+        display: flex; align-items: baseline; justify-content: space-between;
+        padding: 26px 6px 0;
+    }
+    .mwm { color: #f8fafc; font-size: 24px; font-weight: 700; }
+    .mwm-tag { color: #64748b; font-size: 16px; margin-top: 2px; }
+    .site { color: #94a3b8; font-size: 22px; }
+</style>
+</head>
+<body>
+    <div class="head">
+        <div class="wordmark">{{WORDMARK_A}}<span class="accent">{{WORDMARK_B}}</span><span class="tm">&trade;</span></div>
+        <p class="tagline">{{TAGLINE}}</p>
+    </div>
+
+    <div class="browser">
+        <div class="bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="addr"><span class="lock">&#128274;</span> {{DISPLAY_URL}}</span>
+        </div>
+        <div class="shot"><img src="{{SCREENSHOT_SRC}}" alt=""></div>
+    </div>
+
+    <div class="cta">{{CTA}}</div>
+
+    <div class="footer">
+        <div>
+            <div class="mwm">Moon Whale Media, LLC</div>
+            <div class="mwm-tag">apps built with care</div>
+        </div>
+        <div class="site">moonwhale.media</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+{
+    "_comment": "COPY DECK for the Moon Whale Media promo campaign. Each product carries a stack of promos: id (stable - used for cooldown history), title (rendered ON the card under the wordmark), blurb (the post caption), and optionally its own screenshot/capture_url for a feature-specific page shot (falls back to the product's home shot). The picker chooses randomly among promos NOT posted within cooldown_days and never repeats a product back-to-back. Products whose screenshot is missing on disk are skipped (domains not live yet -> captures come from the Herd dev hosts via tools/capture-homes.mjs).",
+    "products": [
+        {
+            "key": "coderstudyflow",
+            "name": "CoderStudyFlow",
+            "wordmark": ["CoderStudy", "Flow"],
+            "accent": "#f59e0b",
+            "url": "https://coderstudyflow.com",
+            "tagline": "Practice tests & study guides for developer certifications and interviews",
+            "screenshot": "brands/moonwhalemedia/assets/coderstudyflow-home.png",
+            "capture_url": "https://coderstudyflow.test",
+            "hashtags": "#programming #interviewprep #certification",
+            "promos": [
+                {
+                    "id": "csf-overview",
+                    "title": "Practice tests & study guides for developer certifications and interviews",
+                    "blurb": "22,525 practice questions across 111 technology tracks - every single one with a written explanation of WHY the right answer is right. 🧠"
+                },
+                {
+                    "id": "csf-catalog",
+                    "title": "111 technology tracks - from Python to Kubernetes to System Design",
+                    "blurb": "Languages, frameworks, databases, cloud, DevOps, security, AI tools, CS fundamentals - if it shows up in a job interview, there's a track for it. 💻 Which track would you start with?"
+                },
+                {
+                    "id": "csf-explanations",
+                    "title": "Every question teaches you WHY the answer is right",
+                    "blurb": "An answer key tells you WHAT. CoderStudyFlow tells you WHY - all 22,525 questions ship with a written explanation you review right beside your pick. That's where the real learning happens. 📚"
+                },
+                {
+                    "id": "csf-randomized",
+                    "title": "You can't memorize the shape of these tests",
+                    "blurb": "The question draw AND the answer order reshuffle on every attempt. Practice the same topic five times, get five different tests - so your score reflects knowledge, not recall of 'C is always right'. 🎯"
+                },
+                {
+                    "id": "csf-guides",
+                    "title": "901 study guides - one for every single category",
+                    "blurb": "Every version and every topic has its own study guide: key concepts, common pitfalls, new features, deprecations. Read the guide, then jump straight into a test on the same material. 📖",
+                    "screenshot": "brands/moonwhalemedia/assets/coderstudyflow-guides.png",
+                    "capture_url": "https://coderstudyflow.test/technologies/javascript/guides"
+                },
+                {
+                    "id": "csf-show-answers",
+                    "title": "Show Answers mode - learn while it's fresh",
+                    "blurb": "Pro flips a test into learn-as-you-go: the moment you lock in a choice, the verdict and the explanation appear. No waiting until the end to find out what you got wrong. ⚡"
+                },
+                {
+                    "id": "csf-free",
+                    "title": "Start free - pick any one track, no credit card",
+                    "blurb": "Try the real thing free: pick any of 111 tracks and take full, scored 10-question tests with complete answer review. Same bank, same explanations. Upgrade only when you want it all. 🆓"
+                },
+                {
+                    "id": "csf-history",
+                    "title": "Unlimited saved history & favorites",
+                    "blurb": "Pro keeps every attempt as an immutable snapshot - the exact questions, your exact picks, the explanations - and lets you star any question into a personal study set. Watch yourself improve. 📈"
+                },
+                {
+                    "id": "csf-pricing",
+                    "title": "From $4.99/month - or own it forever with Lifetime",
+                    "blurb": "Monthly, yearly, or a one-time Lifetime purchase that's yours forever. No ads on any paid plan. 💰",
+                    "screenshot": "brands/moonwhalemedia/assets/coderstudyflow-pricing.png",
+                    "capture_url": "https://coderstudyflow.test/pricing"
+                },
+                {
+                    "id": "csf-interview",
+                    "title": "Walk into your next tech interview ready",
+                    "blurb": "Data structures & algorithms, system design, design patterns, testing, networking - the CS Fundamentals tracks drill exactly what interviewers ask. Practice until it's reflex. 💪"
+                }
+            ]
+        },
+        {
+            "key": "newsroomflow",
+            "name": "NewsroomFlow",
+            "wordmark": ["Newsroom", "Flow"],
+            "accent": "#2563eb",
+            "url": "https://newsroomflow.app",
+            "tagline": "Your newsroom, in flow",
+            "screenshot": "brands/moonwhalemedia/assets/newsroomflow-home.png",
+            "capture_url": "https://newsroomflow.test",
+            "hashtags": "#news #publishing #media",
+            "promos": [
+                {
+                    "id": "nrf-overview",
+                    "title": "Your newsroom, in flow",
+                    "blurb": "Stay on top of the stories that matter - NewsroomFlow brings your news together in one clean, fast reading experience. 📰"
+                },
+                {
+                    "id": "nrf-signal",
+                    "title": "Less doomscrolling. More signal.",
+                    "blurb": "Less doomscrolling, more signal. NewsroomFlow keeps your daily read organized and readable. ☕"
+                }
+            ]
+        },
+        {
+            "key": "astrologerflow",
+            "name": "AstrologerFlow",
+            "wordmark": ["Astrologer", "Flow"],
+            "accent": "#8b5cf6",
+            "url": "https://astrologerflow.app",
+            "tagline": "Your stars, beautifully read",
+            "screenshot": "brands/moonwhalemedia/assets/astrologerflow-home.png",
+            "capture_url": "https://astrologerflow.test",
+            "hashtags": "#astrology #horoscope #zodiac",
+            "promos": [
+                {
+                    "id": "af-overview",
+                    "title": "Your stars, beautifully read",
+                    "blurb": "Daily horoscopes, birth charts, and readings - AstrologerFlow puts the whole sky in your pocket. ✨"
+                },
+                {
+                    "id": "af-week",
+                    "title": "What are the stars saying about YOUR week?",
+                    "blurb": "What are the stars saying about YOUR week? Find out on AstrologerFlow. 🌙"
+                }
+            ]
+        },
+        {
+            "key": "filemanagerflow",
+            "name": "FileManagerFlow",
+            "wordmark": ["FileManager", "Flow"],
+            "accent": "#0ea5e9",
+            "url": "https://filemanagerflow.app",
+            "tagline": "Your files, finally organized",
+            "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-home.png",
+            "capture_url": "https://filemanagerflow.test",
+            "hashtags": "#productivity #files #organization",
+            "promos": [
+                {
+                    "id": "fmf-overview",
+                    "title": "Your files, finally organized",
+                    "blurb": "Wrangle your files like a pro - FileManagerFlow makes organizing, finding, and managing your stuff actually pleasant. 🗂️"
+                },
+                {
+                    "id": "fmf-fast",
+                    "title": "Fast, clean, and built to keep you organized",
+                    "blurb": "The file manager you didn't know you needed. Fast, clean, and built to keep you organized. ⚡"
+                }
+            ]
+        },
+        {
+            "key": "myemergencyscreen",
+            "name": "MyEmergencyScreen",
+            "wordmark": ["MyEmergency", "Screen"],
+            "accent": "#ef4444",
+            "url": "https://myemergencyscreen.com",
+            "tagline": "The lock screen that could save your life",
+            "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-home.png",
+            "capture_url": null,
+            "hashtags": "#safety #emergency #health",
+            "promos": [
+                {
+                    "id": "mes-overview",
+                    "title": "The lock screen that could save your life",
+                    "blurb": "If something happened to you today, could first responders reach your emergency contacts? MyEmergencyScreen puts your critical info right on your lock screen. 🚨"
+                },
+                {
+                    "id": "mes-info",
+                    "title": "Critical info, visible when it matters most",
+                    "blurb": "Allergies, conditions, emergency contacts - visible to the people who need them, exactly when they need them. Set it up in minutes. ❤️"
+                }
+            ]
+        },
+        {
+            "key": "thecardbackcantina",
+            "name": "The Cardback Cantina",
+            "wordmark": ["Cardback ", "Cantina"],
+            "accent": "#f97316",
+            "url": "https://thecardbackcantina.com",
+            "tagline": "Where collectors gather",
+            "screenshot": "brands/moonwhalemedia/assets/thecardbackcantina-home.png",
+            "capture_url": "https://thecardbackcantina.test",
+            "hashtags": "#tradingcards #collecting #collectors",
+            "promos": [
+                {
+                    "id": "tcc-overview",
+                    "title": "Where collectors gather",
+                    "blurb": "Collectors, this one's for you - checklists, sets, and the tools to track your collection at The Cardback Cantina. 🃏"
+                },
+                {
+                    "id": "tcc-track",
+                    "title": "Know what you have. Know what you're hunting.",
+                    "blurb": "Know exactly what you have and exactly what you're hunting. The Cardback Cantina keeps your collection organized. 🔍"
+                }
+            ]
+        }
+    ]
+}

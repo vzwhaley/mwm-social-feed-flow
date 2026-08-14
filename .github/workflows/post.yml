@@ -28,11 +28,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        brand: [coderstudyflow]
+        brand: [coderstudyflow, moonwhalemedia]
     env:
       CHROME_BIN: /usr/bin/google-chrome
+      # Default secrets serve CoderStudyFlow; per-brand overrides win when set -
+      # the engine prefers <BRAND>_FB_PAGE_ID etc. (brand uppercased, no dashes).
       FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
       FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      MOONWHALEMEDIA_FB_PAGE_ID: ${{ secrets.MOONWHALEMEDIA_FB_PAGE_ID }}
+      MOONWHALEMEDIA_FB_PAGE_TOKEN: ${{ secrets.MOONWHALEMEDIA_FB_PAGE_TOKEN }}
       X_API_KEY: ${{ secrets.X_API_KEY }}
       X_API_SECRET: ${{ secrets.X_API_SECRET }}
       X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}

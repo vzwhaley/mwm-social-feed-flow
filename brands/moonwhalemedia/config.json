@@ -1,0 +1,27 @@
+{
+    "name": "Moon Whale Media",
+    "type": "promo",
+    "site_url": "https://moonwhale.media",
+    "data_file": "data/mwm-products.json",
+    "state_file": "state/moonwhalemedia.json",
+    "template": "brands/moonwhalemedia/template.html",
+    "timezone": "America/New_York",
+    "cooldown_days": 5,
+    "networks": {
+        "facebook": true,
+        "x": false,
+        "instagram": false,
+        "linkedin": false
+    },
+    "caption": {
+        "lines": [
+            "{blurb}",
+            "",
+            "👉 {product_url}",
+            "",
+            "{product_name} is a Moon Whale Media product - {site_url}"
+        ],
+        "hashtags": "#moonwhalemedia #apps #software"
+    },
+    "comment": "🔗 Check out {product_name} here 👉 {product_url}"
+}
