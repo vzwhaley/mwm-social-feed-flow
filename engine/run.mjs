@@ -57,28 +57,40 @@ const imagePath = join(outDir, `${brand}-latest.png`);
 let caption, commentMessage, stateAfterSuccess, pickedLabel;
 
 if ((config.type ?? 'quiz') === 'promo') {
-    // ---- PROMO: pick randomly among promos OUTSIDE the cooldown window ------
+    // ---- PROMO: product-fair rotation + per-promo cooldown -------------------
     // Every product carries a stack of promos (overview + feature drill-downs,
-    // each optionally with its own page screenshot). A promo that posted within
-    // cooldown_days is ineligible, and the same product never posts twice in a
-    // row - so at 4 posts/day the feed doesn't repeat itself.
+    // each optionally with its own page screenshot); a product may also declare
+    // promos_file (generated promos, e.g. one per CoderStudyFlow track). The
+    // picker chooses a PRODUCT first - fair rotation regardless of deck size -
+    // then a random promo of that product outside the cooldown window. The same
+    // product never posts twice in a row.
     const deck = JSON.parse(readFileSync(join(ROOT, config.data_file), 'utf8'));
     const cooldownDays = config.cooldown_days ?? 5;
     const history = state.history ?? [];
     const cutoff = Date.now() - cooldownDays * 86_400_000;
     const recentIds = new Set(history.filter((h) => Date.parse(h.at) > cutoff).map((h) => h.id));
     const lastProduct = history.at(-1)?.product ?? null;
+    const forcePromo = opt('promo'); // testing: render a specific promo id
 
     // Flatten to candidates whose screenshot actually exists on disk.
     const candidates = [];
     for (const product of deck.products) {
-        for (const promo of product.promos) {
-            const shot = promo.screenshot ?? product.screenshot;
-            if (!existsSync(join(ROOT, shot))) {
-                console.warn(`SKIP ${promo.id}: screenshot missing (${shot}) - run tools/capture-homes.mjs`);
-                continue;
+        let promos = product.promos ?? [];
+        if (product.promos_file) {
+            try {
+                promos = promos.concat(JSON.parse(readFileSync(join(ROOT, product.promos_file), 'utf8')));
+            } catch {
+                console.warn(`WARN ${product.key}: promos_file ${product.promos_file} missing/unreadable - using inline promos only.`);
             }
+        }
+        let skipped = 0;
+        for (const promo of promos) {
+            const shot = promo.screenshot ?? product.screenshot;
+            if (!existsSync(join(ROOT, shot))) { skipped++; continue; }
             candidates.push({ product, promo, shot });
+        }
+        if (skipped > 0) {
+            console.warn(`SKIP ${product.key}: ${skipped} promo(s) missing screenshots - run tools/capture-homes.mjs`);
         }
     }
     if (candidates.length === 0) {
@@ -86,18 +98,38 @@ if ((config.type ?? 'quiz') === 'promo') {
         process.exit(1);
     }
 
-    // Eligibility tiers: outside cooldown + different product than last post;
-    // relax constraints only if a tier comes up empty (tiny decks still post).
-    let pool = candidates.filter((c) => !recentIds.has(c.promo.id) && c.product.key !== lastProduct);
-    if (pool.length === 0) pool = candidates.filter((c) => !recentIds.has(c.promo.id));
-    if (pool.length === 0) {
-        console.warn(`All ${candidates.length} promos are inside the ${cooldownDays}-day cooldown - relaxing to least-recently-posted.`);
-        const lastPosted = new Map(history.map((h) => [h.id, Date.parse(h.at)]));
-        pool = [...candidates].sort((a, b) => (lastPosted.get(a.promo.id) ?? 0) - (lastPosted.get(b.promo.id) ?? 0)).slice(0, 1);
+    let chosen;
+    if (forcePromo) {
+        chosen = candidates.find((c) => c.promo.id === forcePromo);
+        if (!chosen) { console.error(`--promo ${forcePromo}: not found or screenshot missing.`); process.exit(1); }
+        pickedLabel = `${chosen.product.name} / ${chosen.promo.id} (FORCED via --promo)`;
+    } else {
+        // Product-first: rotate among products that still have eligible promos.
+        const eligible = candidates.filter((c) => !recentIds.has(c.promo.id));
+        const byProduct = new Map();
+        for (const c of eligible) {
+            (byProduct.get(c.product.key) ?? byProduct.set(c.product.key, []).get(c.product.key)).push(c);
+        }
+        let productKeys = [...byProduct.keys()].filter((k) => k !== lastProduct);
+        if (productKeys.length === 0) productKeys = [...byProduct.keys()];
+
+        if (productKeys.length > 0) {
+            // Prefer the product that posted least recently (fair round-robin).
+            const lastByProduct = new Map();
+            for (const h of history) lastByProduct.set(h.product, Date.parse(h.at));
+            productKeys.sort((a, b) => (lastByProduct.get(a) ?? 0) - (lastByProduct.get(b) ?? 0));
+            const productPool = byProduct.get(productKeys[0]);
+            chosen = productPool[Math.floor(Math.random() * productPool.length)];
+            pickedLabel = `${chosen.product.name} / ${chosen.promo.id} (product pool ${productPool.length}, ${byProduct.size} products eligible, cooldown ${cooldownDays}d)`;
+        } else {
+            console.warn(`All ${candidates.length} promos are inside the ${cooldownDays}-day cooldown - relaxing to least-recently-posted.`);
+            const lastPosted = new Map(history.map((h) => [h.id, Date.parse(h.at)]));
+            chosen = [...candidates].sort((a, b) => (lastPosted.get(a.promo.id) ?? 0) - (lastPosted.get(b.promo.id) ?? 0))[0];
+            pickedLabel = `${chosen.product.name} / ${chosen.promo.id} (cooldown relaxed)`;
+        }
     }
 
-    const { product, promo, shot } = pool[Math.floor(Math.random() * pool.length)];
-    pickedLabel = `${product.name} / ${promo.id} (pool ${pool.length}/${candidates.length}, cooldown ${cooldownDays}d)`;
+    const { product, promo, shot } = chosen;
 
     // Screenshot -> data URI so the temp-file render has no path issues.
     const shotPath = join(ROOT, shot);

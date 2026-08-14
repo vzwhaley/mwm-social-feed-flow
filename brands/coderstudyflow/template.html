@@ -44,14 +44,16 @@
     .prompt { margin-top: 30px; color: #64748b; font-size: 26px; }
     .prompt .cursor { display: inline-block; width: 14px; height: 28px; background: #fbbf24; vertical-align: -4px; }
     .footer {
-        display: flex; align-items: baseline; justify-content: space-between;
-        padding: 30px 8px 0;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 24px 8px 0;
     }
     .wordmark { font-size: 30px; font-weight: bold; color: #f8fafc; }
     .wordmark .flow { color: #f59e0b; }
     .wordmark .tm { font-size: 16px; vertical-align: super; }
     .tagline { color: #64748b; font-size: 17px; margin-top: 2px; }
+    .footer-right { display: flex; align-items: center; gap: 18px; }
     .url { color: #fbbf24; font-size: 26px; font-weight: bold; }
+    .mwm-logo { width: 80px; height: 80px; border-radius: 50%; box-shadow: 0 4px 18px rgba(0,0,0,.5); }
 </style>
 </head>
 <body>
@@ -75,7 +77,10 @@
             <div class="wordmark">CoderStudy<span class="flow">Flow</span><span class="tm">&trade;</span></div>
             <div class="tagline">by moon whale media, llc</div>
         </div>
-        <div class="url">coderstudyflow.com</div>
+        <div class="footer-right">
+            <span class="url">coderstudyflow.com</span>
+            <img class="mwm-logo" src="{{MWM_LOGO_SRC}}" alt="">
+        </div>
     </div>
 </body>
 </html>

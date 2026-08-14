@@ -3,8 +3,10 @@
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync, existsSync, statSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
-import { pathToFileURL } from 'node:url';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 const CHROME_CANDIDATES = [
     process.env.CHROME_BIN,
@@ -60,6 +62,14 @@ export function renderTemplate({ templatePath, replacements, outPath }) {
     let html = readFileSync(templatePath, 'utf8');
     for (const [key, value] of Object.entries(replacements)) {
         html = html.replaceAll(`{{${key}}}`, value);
+    }
+    // House rule: every card carries the round Moon Whale Media logo in the
+    // bottom-right corner. Templates reference {{MWM_LOGO_SRC}}; the renderer
+    // injects it as a data URI so temp-file rendering has no path issues.
+    if (html.includes('{{MWM_LOGO_SRC}}')) {
+        const logoPath = join(REPO_ROOT, 'brands', 'moonwhalemedia', 'assets', 'mwm-logo-round.png');
+        const logo = `data:image/png;base64,${readFileSync(logoPath).toString('base64')}`;
+        html = html.replaceAll('{{MWM_LOGO_SRC}}', logo);
     }
     return screenshotHtml(html, outPath);
 }

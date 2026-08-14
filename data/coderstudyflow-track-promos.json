@@ -1,0 +1,779 @@
+[
+  {
+    "id": "csf-track-accessibility",
+    "title": "The Accessibility track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Accessibility interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/accessibility.png",
+    "capture_url": "https://coderstudyflow.test/technologies/accessibility"
+  },
+  {
+    "id": "csf-track-android",
+    "title": "Think you know Android? 200 questions say prove it",
+    "blurb": "Android is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/android.png",
+    "capture_url": "https://coderstudyflow.test/technologies/android"
+  },
+  {
+    "id": "csf-track-angular",
+    "title": "Angular interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Angular track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/angular.png",
+    "capture_url": "https://coderstudyflow.test/technologies/angular"
+  },
+  {
+    "id": "csf-track-ansible",
+    "title": "Master Ansible - 200 questions with the why behind every answer",
+    "blurb": "The Ansible track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/ansible.png",
+    "capture_url": "https://coderstudyflow.test/technologies/ansible"
+  },
+  {
+    "id": "csf-track-airflow",
+    "title": "The Apache Airflow track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Apache Airflow interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/airflow.png",
+    "capture_url": "https://coderstudyflow.test/technologies/airflow"
+  },
+  {
+    "id": "csf-track-cassandra",
+    "title": "Think you know Apache Cassandra? 200 questions say prove it",
+    "blurb": "Apache Cassandra is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/cassandra.png",
+    "capture_url": "https://coderstudyflow.test/technologies/cassandra"
+  },
+  {
+    "id": "csf-track-apache",
+    "title": "Apache HTTP Server interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Apache HTTP Server track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/apache.png",
+    "capture_url": "https://coderstudyflow.test/technologies/apache"
+  },
+  {
+    "id": "csf-track-kafka",
+    "title": "Master Apache Kafka - 200 questions with the why behind every answer",
+    "blurb": "The Apache Kafka track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/kafka.png",
+    "capture_url": "https://coderstudyflow.test/technologies/kafka"
+  },
+  {
+    "id": "csf-track-spark",
+    "title": "The Apache Spark track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Apache Spark interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/spark.png",
+    "capture_url": "https://coderstudyflow.test/technologies/spark"
+  },
+  {
+    "id": "csf-track-api-best-practices",
+    "title": "Think you know API Best Practices? 200 questions say prove it",
+    "blurb": "API Best Practices is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/api-best-practices.png",
+    "capture_url": "https://coderstudyflow.test/technologies/api-best-practices"
+  },
+  {
+    "id": "csf-track-argocd",
+    "title": "Argo CD interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Argo CD track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/argocd.png",
+    "capture_url": "https://coderstudyflow.test/technologies/argocd"
+  },
+  {
+    "id": "csf-track-artificial-intelligence",
+    "title": "Master Artificial Intelligence - 200 questions with the why behind every answer",
+    "blurb": "The Artificial Intelligence track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/artificial-intelligence.png",
+    "capture_url": "https://coderstudyflow.test/technologies/artificial-intelligence"
+  },
+  {
+    "id": "csf-track-aspnet-core",
+    "title": "The ASP.NET Core track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a ASP.NET Core interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/aspnet-core.png",
+    "capture_url": "https://coderstudyflow.test/technologies/aspnet-core"
+  },
+  {
+    "id": "csf-track-auth",
+    "title": "Think you know Authentication & Authorization? 200 questions say prove it",
+    "blurb": "Authentication & Authorization is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/auth.png",
+    "capture_url": "https://coderstudyflow.test/technologies/auth"
+  },
+  {
+    "id": "csf-track-aws",
+    "title": "AWS interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the AWS track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/aws.png",
+    "capture_url": "https://coderstudyflow.test/technologies/aws"
+  },
+  {
+    "id": "csf-track-azure",
+    "title": "Master Azure - 200 questions with the why behind every answer",
+    "blurb": "The Azure track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/azure.png",
+    "capture_url": "https://coderstudyflow.test/technologies/azure"
+  },
+  {
+    "id": "csf-track-bash-shell",
+    "title": "The Bash / Shell Scripting track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Bash / Shell Scripting interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/bash-shell.png",
+    "capture_url": "https://coderstudyflow.test/technologies/bash-shell"
+  },
+  {
+    "id": "csf-track-bootstrap",
+    "title": "Think you know Bootstrap? 200 questions say prove it",
+    "blurb": "Bootstrap is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/bootstrap.png",
+    "capture_url": "https://coderstudyflow.test/technologies/bootstrap"
+  },
+  {
+    "id": "csf-track-csharp",
+    "title": "C# interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the C# track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/csharp.png",
+    "capture_url": "https://coderstudyflow.test/technologies/csharp"
+  },
+  {
+    "id": "csf-track-cpp",
+    "title": "Master C++ - 200 questions with the why behind every answer",
+    "blurb": "The C++ track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/cpp.png",
+    "capture_url": "https://coderstudyflow.test/technologies/cpp"
+  },
+  {
+    "id": "csf-track-claude-code",
+    "title": "The Claude Code track: 175 questions, 7 study guides",
+    "blurb": "Prepping for a Claude Code interview or cert? Drill 175 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/claude-code.png",
+    "capture_url": "https://coderstudyflow.test/technologies/claude-code"
+  },
+  {
+    "id": "csf-track-cloudflare",
+    "title": "Think you know Cloudflare? 200 questions say prove it",
+    "blurb": "Cloudflare is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/cloudflare.png",
+    "capture_url": "https://coderstudyflow.test/technologies/cloudflare"
+  },
+  {
+    "id": "csf-track-codex",
+    "title": "Codex interviews won't surprise you after 175 questions",
+    "blurb": "From fundamentals to the tricky corners, the Codex track's 175 questions and 7 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/codex.png",
+    "capture_url": "https://coderstudyflow.test/technologies/codex"
+  },
+  {
+    "id": "csf-track-css",
+    "title": "Master CSS - 200 questions with the why behind every answer",
+    "blurb": "The CSS track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/css.png",
+    "capture_url": "https://coderstudyflow.test/technologies/css"
+  },
+  {
+    "id": "csf-track-cursor",
+    "title": "The Cursor track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Cursor interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/cursor.png",
+    "capture_url": "https://coderstudyflow.test/technologies/cursor"
+  },
+  {
+    "id": "csf-track-data-science-engineering",
+    "title": "Think you know Data Science Engineering? 200 questions say prove it",
+    "blurb": "Data Science Engineering is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/data-science-engineering.png",
+    "capture_url": "https://coderstudyflow.test/technologies/data-science-engineering"
+  },
+  {
+    "id": "csf-track-data-structures-algorithms",
+    "title": "Data Structures & Algorithms interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Data Structures & Algorithms track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/data-structures-algorithms.png",
+    "capture_url": "https://coderstudyflow.test/technologies/data-structures-algorithms"
+  },
+  {
+    "id": "csf-track-design-patterns",
+    "title": "Master Design Patterns - 200 questions with the why behind every answer",
+    "blurb": "The Design Patterns track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/design-patterns.png",
+    "capture_url": "https://coderstudyflow.test/technologies/design-patterns"
+  },
+  {
+    "id": "csf-track-django",
+    "title": "The Django track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Django interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/django.png",
+    "capture_url": "https://coderstudyflow.test/technologies/django"
+  },
+  {
+    "id": "csf-track-docker",
+    "title": "Think you know Docker? 200 questions say prove it",
+    "blurb": "Docker is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/docker.png",
+    "capture_url": "https://coderstudyflow.test/technologies/docker"
+  },
+  {
+    "id": "csf-track-elk-stack",
+    "title": "ELK Stack interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the ELK Stack track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/elk-stack.png",
+    "capture_url": "https://coderstudyflow.test/technologies/elk-stack"
+  },
+  {
+    "id": "csf-track-express",
+    "title": "Master Express - 200 questions with the why behind every answer",
+    "blurb": "The Express track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/express.png",
+    "capture_url": "https://coderstudyflow.test/technologies/express"
+  },
+  {
+    "id": "csf-track-fastapi",
+    "title": "The FastAPI track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a FastAPI interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/fastapi.png",
+    "capture_url": "https://coderstudyflow.test/technologies/fastapi"
+  },
+  {
+    "id": "csf-track-flask",
+    "title": "Think you know Flask? 200 questions say prove it",
+    "blurb": "Flask is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/flask.png",
+    "capture_url": "https://coderstudyflow.test/technologies/flask"
+  },
+  {
+    "id": "csf-track-flutter",
+    "title": "Flutter interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Flutter track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/flutter.png",
+    "capture_url": "https://coderstudyflow.test/technologies/flutter"
+  },
+  {
+    "id": "csf-track-gemini-cli",
+    "title": "Master Gemini CLI - 200 questions with the why behind every answer",
+    "blurb": "The Gemini CLI track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/gemini-cli.png",
+    "capture_url": "https://coderstudyflow.test/technologies/gemini-cli"
+  },
+  {
+    "id": "csf-track-git",
+    "title": "The Git track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Git interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/git.png",
+    "capture_url": "https://coderstudyflow.test/technologies/git"
+  },
+  {
+    "id": "csf-track-github-actions",
+    "title": "Think you know GitHub Actions? 200 questions say prove it",
+    "blurb": "GitHub Actions is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/github-actions.png",
+    "capture_url": "https://coderstudyflow.test/technologies/github-actions"
+  },
+  {
+    "id": "csf-track-github-copilot",
+    "title": "GitHub Copilot interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the GitHub Copilot track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/github-copilot.png",
+    "capture_url": "https://coderstudyflow.test/technologies/github-copilot"
+  },
+  {
+    "id": "csf-track-gitlab-ci",
+    "title": "Master GitLab CI/CD - 200 questions with the why behind every answer",
+    "blurb": "The GitLab CI/CD track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/gitlab-ci.png",
+    "capture_url": "https://coderstudyflow.test/technologies/gitlab-ci"
+  },
+  {
+    "id": "csf-track-go",
+    "title": "The Go track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Go interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/go.png",
+    "capture_url": "https://coderstudyflow.test/technologies/go"
+  },
+  {
+    "id": "csf-track-google-cloud",
+    "title": "Think you know Google Cloud? 200 questions say prove it",
+    "blurb": "Google Cloud is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/google-cloud.png",
+    "capture_url": "https://coderstudyflow.test/technologies/google-cloud"
+  },
+  {
+    "id": "csf-track-grafana",
+    "title": "Grafana interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Grafana track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/grafana.png",
+    "capture_url": "https://coderstudyflow.test/technologies/grafana"
+  },
+  {
+    "id": "csf-track-graphql",
+    "title": "Master GraphQL - 200 questions with the why behind every answer",
+    "blurb": "The GraphQL track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/graphql.png",
+    "capture_url": "https://coderstudyflow.test/technologies/graphql"
+  },
+  {
+    "id": "csf-track-grpc",
+    "title": "The gRPC track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a gRPC interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/grpc.png",
+    "capture_url": "https://coderstudyflow.test/technologies/grpc"
+  },
+  {
+    "id": "csf-track-vault",
+    "title": "Think you know HashiCorp Vault? 200 questions say prove it",
+    "blurb": "HashiCorp Vault is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/vault.png",
+    "capture_url": "https://coderstudyflow.test/technologies/vault"
+  },
+  {
+    "id": "csf-track-helm",
+    "title": "Helm interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Helm track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/helm.png",
+    "capture_url": "https://coderstudyflow.test/technologies/helm"
+  },
+  {
+    "id": "csf-track-html",
+    "title": "Master HTML - 200 questions with the why behind every answer",
+    "blurb": "The HTML track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/html.png",
+    "capture_url": "https://coderstudyflow.test/technologies/html"
+  },
+  {
+    "id": "csf-track-hugging-face",
+    "title": "The Hugging Face track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Hugging Face interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/hugging-face.png",
+    "capture_url": "https://coderstudyflow.test/technologies/hugging-face"
+  },
+  {
+    "id": "csf-track-ios",
+    "title": "Think you know iOS? 200 questions say prove it",
+    "blurb": "iOS is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/ios.png",
+    "capture_url": "https://coderstudyflow.test/technologies/ios"
+  },
+  {
+    "id": "csf-track-istio",
+    "title": "Istio interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Istio track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/istio.png",
+    "capture_url": "https://coderstudyflow.test/technologies/istio"
+  },
+  {
+    "id": "csf-track-java",
+    "title": "Master Java - 200 questions with the why behind every answer",
+    "blurb": "The Java track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/java.png",
+    "capture_url": "https://coderstudyflow.test/technologies/java"
+  },
+  {
+    "id": "csf-track-javascript",
+    "title": "The JavaScript track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a JavaScript interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/javascript.png",
+    "capture_url": "https://coderstudyflow.test/technologies/javascript"
+  },
+  {
+    "id": "csf-track-javascript-testing",
+    "title": "Think you know JavaScript Testing? 200 questions say prove it",
+    "blurb": "JavaScript Testing is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/javascript-testing.png",
+    "capture_url": "https://coderstudyflow.test/technologies/javascript-testing"
+  },
+  {
+    "id": "csf-track-jenkins",
+    "title": "Jenkins interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Jenkins track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/jenkins.png",
+    "capture_url": "https://coderstudyflow.test/technologies/jenkins"
+  },
+  {
+    "id": "csf-track-junit",
+    "title": "Master JUnit - 200 questions with the why behind every answer",
+    "blurb": "The JUnit track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/junit.png",
+    "capture_url": "https://coderstudyflow.test/technologies/junit"
+  },
+  {
+    "id": "csf-track-kotlin",
+    "title": "The Kotlin track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Kotlin interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/kotlin.png",
+    "capture_url": "https://coderstudyflow.test/technologies/kotlin"
+  },
+  {
+    "id": "csf-track-kubernetes",
+    "title": "Think you know Kubernetes? 200 questions say prove it",
+    "blurb": "Kubernetes is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/kubernetes.png",
+    "capture_url": "https://coderstudyflow.test/technologies/kubernetes"
+  },
+  {
+    "id": "csf-track-langchain",
+    "title": "LangChain interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the LangChain track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/langchain.png",
+    "capture_url": "https://coderstudyflow.test/technologies/langchain"
+  },
+  {
+    "id": "csf-track-laravel",
+    "title": "Master Laravel - 200 questions with the why behind every answer",
+    "blurb": "The Laravel track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/laravel.png",
+    "capture_url": "https://coderstudyflow.test/technologies/laravel"
+  },
+  {
+    "id": "csf-track-linux",
+    "title": "The Linux track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Linux interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/linux.png",
+    "capture_url": "https://coderstudyflow.test/technologies/linux"
+  },
+  {
+    "id": "csf-track-machine-learning",
+    "title": "Think you know Machine Learning? 200 questions say prove it",
+    "blurb": "Machine Learning is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/machine-learning.png",
+    "capture_url": "https://coderstudyflow.test/technologies/machine-learning"
+  },
+  {
+    "id": "csf-track-mlops",
+    "title": "MLOps interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the MLOps track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/mlops.png",
+    "capture_url": "https://coderstudyflow.test/technologies/mlops"
+  },
+  {
+    "id": "csf-track-mongodb",
+    "title": "Master MongoDB - 200 questions with the why behind every answer",
+    "blurb": "The MongoDB track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/mongodb.png",
+    "capture_url": "https://coderstudyflow.test/technologies/mongodb"
+  },
+  {
+    "id": "csf-track-mysql",
+    "title": "The MySQL track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a MySQL interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/mysql.png",
+    "capture_url": "https://coderstudyflow.test/technologies/mysql"
+  },
+  {
+    "id": "csf-track-nestjs",
+    "title": "Think you know NestJS? 200 questions say prove it",
+    "blurb": "NestJS is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/nestjs.png",
+    "capture_url": "https://coderstudyflow.test/technologies/nestjs"
+  },
+  {
+    "id": "csf-track-networking",
+    "title": "Networking interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Networking track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/networking.png",
+    "capture_url": "https://coderstudyflow.test/technologies/networking"
+  },
+  {
+    "id": "csf-track-nextjs",
+    "title": "Master Next.js - 200 questions with the why behind every answer",
+    "blurb": "The Next.js track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/nextjs.png",
+    "capture_url": "https://coderstudyflow.test/technologies/nextjs"
+  },
+  {
+    "id": "csf-track-nginx",
+    "title": "The Nginx track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Nginx interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/nginx.png",
+    "capture_url": "https://coderstudyflow.test/technologies/nginx"
+  },
+  {
+    "id": "csf-track-node",
+    "title": "Think you know Node.js? 200 questions say prove it",
+    "blurb": "Node.js is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/node.png",
+    "capture_url": "https://coderstudyflow.test/technologies/node"
+  },
+  {
+    "id": "csf-track-nuxt",
+    "title": "Nuxt interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Nuxt track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/nuxt.png",
+    "capture_url": "https://coderstudyflow.test/technologies/nuxt"
+  },
+  {
+    "id": "csf-track-opentelemetry",
+    "title": "Master OpenTelemetry - 200 questions with the why behind every answer",
+    "blurb": "The OpenTelemetry track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/opentelemetry.png",
+    "capture_url": "https://coderstudyflow.test/technologies/opentelemetry"
+  },
+  {
+    "id": "csf-track-oracle",
+    "title": "The Oracle track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Oracle interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/oracle.png",
+    "capture_url": "https://coderstudyflow.test/technologies/oracle"
+  },
+  {
+    "id": "csf-track-php",
+    "title": "Think you know PHP? 575 questions say prove it",
+    "blurb": "PHP is on the menu: 575 questions, 23 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/php.png",
+    "capture_url": "https://coderstudyflow.test/technologies/php"
+  },
+  {
+    "id": "csf-track-phpunit",
+    "title": "PHPUnit interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the PHPUnit track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/phpunit.png",
+    "capture_url": "https://coderstudyflow.test/technologies/phpunit"
+  },
+  {
+    "id": "csf-track-playwright",
+    "title": "Master Playwright - 200 questions with the why behind every answer",
+    "blurb": "The Playwright track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/playwright.png",
+    "capture_url": "https://coderstudyflow.test/technologies/playwright"
+  },
+  {
+    "id": "csf-track-postgresql",
+    "title": "The PostgreSQL track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a PostgreSQL interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/postgresql.png",
+    "capture_url": "https://coderstudyflow.test/technologies/postgresql"
+  },
+  {
+    "id": "csf-track-prometheus",
+    "title": "Think you know Prometheus? 200 questions say prove it",
+    "blurb": "Prometheus is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/prometheus.png",
+    "capture_url": "https://coderstudyflow.test/technologies/prometheus"
+  },
+  {
+    "id": "csf-track-prompt-engineering",
+    "title": "Prompt Engineering interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Prompt Engineering track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/prompt-engineering.png",
+    "capture_url": "https://coderstudyflow.test/technologies/prompt-engineering"
+  },
+  {
+    "id": "csf-track-pytest",
+    "title": "Master pytest - 200 questions with the why behind every answer",
+    "blurb": "The pytest track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/pytest.png",
+    "capture_url": "https://coderstudyflow.test/technologies/pytest"
+  },
+  {
+    "id": "csf-track-python",
+    "title": "The Python track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Python interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/python.png",
+    "capture_url": "https://coderstudyflow.test/technologies/python"
+  },
+  {
+    "id": "csf-track-pytorch",
+    "title": "Think you know PyTorch? 200 questions say prove it",
+    "blurb": "PyTorch is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/pytorch.png",
+    "capture_url": "https://coderstudyflow.test/technologies/pytorch"
+  },
+  {
+    "id": "csf-track-r",
+    "title": "R interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the R track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/r.png",
+    "capture_url": "https://coderstudyflow.test/technologies/r"
+  },
+  {
+    "id": "csf-track-rag-vector-databases",
+    "title": "Master RAG & Vector Databases - 200 questions with the why behind every answer",
+    "blurb": "The RAG & Vector Databases track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/rag-vector-databases.png",
+    "capture_url": "https://coderstudyflow.test/technologies/rag-vector-databases"
+  },
+  {
+    "id": "csf-track-react",
+    "title": "The React track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a React interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/react.png",
+    "capture_url": "https://coderstudyflow.test/technologies/react"
+  },
+  {
+    "id": "csf-track-react-native",
+    "title": "Think you know React Native? 200 questions say prove it",
+    "blurb": "React Native is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/react-native.png",
+    "capture_url": "https://coderstudyflow.test/technologies/react-native"
+  },
+  {
+    "id": "csf-track-redis",
+    "title": "Redis interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Redis track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/redis.png",
+    "capture_url": "https://coderstudyflow.test/technologies/redis"
+  },
+  {
+    "id": "csf-track-regex",
+    "title": "Master Regular Expressions - 200 questions with the why behind every answer",
+    "blurb": "The Regular Expressions track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/regex.png",
+    "capture_url": "https://coderstudyflow.test/technologies/regex"
+  },
+  {
+    "id": "csf-track-ruby",
+    "title": "The Ruby track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Ruby interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/ruby.png",
+    "capture_url": "https://coderstudyflow.test/technologies/ruby"
+  },
+  {
+    "id": "csf-track-rails",
+    "title": "Think you know Ruby on Rails? 200 questions say prove it",
+    "blurb": "Ruby on Rails is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/rails.png",
+    "capture_url": "https://coderstudyflow.test/technologies/rails"
+  },
+  {
+    "id": "csf-track-rust",
+    "title": "Rust interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Rust track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/rust.png",
+    "capture_url": "https://coderstudyflow.test/technologies/rust"
+  },
+  {
+    "id": "csf-track-sass",
+    "title": "Master Sass - 200 questions with the why behind every answer",
+    "blurb": "The Sass track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/sass.png",
+    "capture_url": "https://coderstudyflow.test/technologies/sass"
+  },
+  {
+    "id": "csf-track-security",
+    "title": "The Security track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Security interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/security.png",
+    "capture_url": "https://coderstudyflow.test/technologies/security"
+  },
+  {
+    "id": "csf-track-snowflake",
+    "title": "Think you know Snowflake? 200 questions say prove it",
+    "blurb": "Snowflake is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/snowflake.png",
+    "capture_url": "https://coderstudyflow.test/technologies/snowflake"
+  },
+  {
+    "id": "csf-track-spring-boot",
+    "title": "Spring Boot interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Spring Boot track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/spring-boot.png",
+    "capture_url": "https://coderstudyflow.test/technologies/spring-boot"
+  },
+  {
+    "id": "csf-track-sql",
+    "title": "Master SQL - 200 questions with the why behind every answer",
+    "blurb": "The SQL track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/sql.png",
+    "capture_url": "https://coderstudyflow.test/technologies/sql"
+  },
+  {
+    "id": "csf-track-sql-server",
+    "title": "The SQL Server track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a SQL Server interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/sql-server.png",
+    "capture_url": "https://coderstudyflow.test/technologies/sql-server"
+  },
+  {
+    "id": "csf-track-sqlite",
+    "title": "Think you know SQLite? 200 questions say prove it",
+    "blurb": "SQLite is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/sqlite.png",
+    "capture_url": "https://coderstudyflow.test/technologies/sqlite"
+  },
+  {
+    "id": "csf-track-svelte",
+    "title": "Svelte / SvelteKit interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Svelte / SvelteKit track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/svelte.png",
+    "capture_url": "https://coderstudyflow.test/technologies/svelte"
+  },
+  {
+    "id": "csf-track-swift",
+    "title": "Master Swift - 200 questions with the why behind every answer",
+    "blurb": "The Swift track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/swift.png",
+    "capture_url": "https://coderstudyflow.test/technologies/swift"
+  },
+  {
+    "id": "csf-track-symfony",
+    "title": "The Symfony track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Symfony interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/symfony.png",
+    "capture_url": "https://coderstudyflow.test/technologies/symfony"
+  },
+  {
+    "id": "csf-track-system-design",
+    "title": "Think you know System Design? 200 questions say prove it",
+    "blurb": "System Design is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/system-design.png",
+    "capture_url": "https://coderstudyflow.test/technologies/system-design"
+  },
+  {
+    "id": "csf-track-tailwind",
+    "title": "Tailwind CSS interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Tailwind CSS track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/tailwind.png",
+    "capture_url": "https://coderstudyflow.test/technologies/tailwind"
+  },
+  {
+    "id": "csf-track-terraform",
+    "title": "Master Terraform - 200 questions with the why behind every answer",
+    "blurb": "The Terraform track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/terraform.png",
+    "capture_url": "https://coderstudyflow.test/technologies/terraform"
+  },
+  {
+    "id": "csf-track-testing-tdd",
+    "title": "The Testing & TDD track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Testing & TDD interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/testing-tdd.png",
+    "capture_url": "https://coderstudyflow.test/technologies/testing-tdd"
+  },
+  {
+    "id": "csf-track-typescript",
+    "title": "Think you know TypeScript? 200 questions say prove it",
+    "blurb": "TypeScript is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/typescript.png",
+    "capture_url": "https://coderstudyflow.test/technologies/typescript"
+  },
+  {
+    "id": "csf-track-unix",
+    "title": "Unix interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the Unix track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/unix.png",
+    "capture_url": "https://coderstudyflow.test/technologies/unix"
+  },
+  {
+    "id": "csf-track-vite",
+    "title": "Master Vite - 200 questions with the why behind every answer",
+    "blurb": "The Vite track packs 200 original questions and 8 study guides - every answer explained, every test freshly randomized. Start free and see where you stand. 🎯",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/vite.png",
+    "capture_url": "https://coderstudyflow.test/technologies/vite"
+  },
+  {
+    "id": "csf-track-vue",
+    "title": "The Vue.js track: 200 questions, 8 study guides",
+    "blurb": "Prepping for a Vue.js interview or cert? Drill 200 questions by topic or take the Full Mix, then read the explanation behind every single answer. 💡",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/vue.png",
+    "capture_url": "https://coderstudyflow.test/technologies/vue"
+  },
+  {
+    "id": "csf-track-websockets",
+    "title": "Think you know WebSockets? 200 questions say prove it",
+    "blurb": "WebSockets is on the menu: 200 questions, 8 study guides, instant scoring, and a written WHY for every answer. Take a free test today. 🧠",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/websockets.png",
+    "capture_url": "https://coderstudyflow.test/technologies/websockets"
+  },
+  {
+    "id": "csf-track-wordpress",
+    "title": "WordPress interviews won't surprise you after 200 questions",
+    "blurb": "From fundamentals to the tricky corners, the WordPress track's 200 questions and 8 guides cover what actually comes up. Randomized every attempt. 🚀",
+    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/wordpress.png",
+    "capture_url": "https://coderstudyflow.test/technologies/wordpress"
+  }
+]

@@ -21,14 +21,28 @@ const only = args.includes('--only') ? args[args.indexOf('--only') + 1] : null;
 
 const deck = JSON.parse(readFileSync(join(ROOT, 'data', 'mwm-products.json'), 'utf8'));
 
-// One capture job per product home + per promo that declares its own page.
+// One capture job per product home + per promo that declares its own page
+// (inline promos AND generated promos_file entries). Duplicate screenshot
+// targets are deduped so shared pages capture once.
 const jobs = [];
+const seen = new Set();
+const add = (key, url, screenshot) => {
+    if (!screenshot || seen.has(screenshot)) return;
+    seen.add(screenshot);
+    jobs.push({ key, url, screenshot });
+};
 for (const product of deck.products) {
     if (only && product.key !== only) continue;
-    jobs.push({ key: product.key, url: product.capture_url, screenshot: product.screenshot });
-    for (const promo of product.promos ?? []) {
+    add(product.key, product.capture_url, product.screenshot);
+    let promos = product.promos ?? [];
+    if (product.promos_file) {
+        try {
+            promos = promos.concat(JSON.parse(readFileSync(join(ROOT, product.promos_file), 'utf8')));
+        } catch { /* generated file not present yet */ }
+    }
+    for (const promo of promos) {
         if (promo.capture_url && promo.screenshot) {
-            jobs.push({ key: promo.id, url: promo.capture_url, screenshot: promo.screenshot });
+            add(promo.id, promo.capture_url, promo.screenshot);
         }
     }
 }

@@ -1,16 +1,20 @@
 {
-    "_comment": "COPY DECK for the Moon Whale Media promo campaign. Each product carries a stack of promos: id (stable - used for cooldown history), title (rendered ON the card under the wordmark), blurb (the post caption), and optionally its own screenshot/capture_url for a feature-specific page shot (falls back to the product's home shot). The picker chooses randomly among promos NOT posted within cooldown_days and never repeats a product back-to-back. Products whose screenshot is missing on disk are skipped (domains not live yet -> captures come from the Herd dev hosts via tools/capture-homes.mjs).",
+    "_comment": "COPY DECK for the Moon Whale Media promo campaign, built from per-product feature-inventory passes (2026-08-14). Each promo: id (stable, used for cooldown history), title (rendered ON the card), blurb (the caption), and optionally its own screenshot/capture_url for a feature-page shot (falls back to the product home shot). A product may also declare promos_file - an external JSON array of generated promos (CoderStudyFlow: one promo per track). The picker chooses a PRODUCT first (fair rotation regardless of deck size), then an eligible promo within it; nothing repeats within cooldown_days. Products whose screenshot is missing on disk are skipped. Captures come from Herd dev hosts until the production domains are live - recapture after each launch.",
     "products": [
         {
             "key": "coderstudyflow",
             "name": "CoderStudyFlow",
-            "wordmark": ["CoderStudy", "Flow"],
+            "wordmark": [
+                "CoderStudy",
+                "Flow"
+            ],
             "accent": "#f59e0b",
             "url": "https://coderstudyflow.com",
             "tagline": "Practice tests & study guides for developer certifications and interviews",
             "screenshot": "brands/moonwhalemedia/assets/coderstudyflow-home.png",
             "capture_url": "https://coderstudyflow.test",
             "hashtags": "#programming #interviewprep #certification",
+            "promos_file": "data/coderstudyflow-track-promos.json",
             "promos": [
                 {
                     "id": "csf-overview",
@@ -65,121 +69,790 @@
                     "id": "csf-interview",
                     "title": "Walk into your next tech interview ready",
                     "blurb": "Data structures & algorithms, system design, design patterns, testing, networking - the CS Fundamentals tracks drill exactly what interviewers ask. Practice until it's reflex. 💪"
+                },
+                {
+                    "id": "csf-full-mix",
+                    "title": "Full Mix - one test drawn from your whole track",
+                    "blurb": "Drill a single category, or hit Full Mix and get a test drawn from every category in the track - versions, topics, all of it, freshly randomized. It's the closest thing to a real exam simulator. 🎲",
+                    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/python.png",
+                    "capture_url": "https://coderstudyflow.test/technologies/python"
+                },
+                {
+                    "id": "csf-php-versions",
+                    "title": "PHP 7.0 to 8.5 - every version gets its own category and guide",
+                    "blurb": "Version depth, not version soup: the PHP track alone has 11 version categories (7.0 through 8.5) plus 12 topic categories, each with its own study guide and question bank. Across the catalog that's 121 version categories - study exactly the release your job runs. 🐘",
+                    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/php.png",
+                    "capture_url": "https://coderstudyflow.test/technologies/php"
+                },
+                {
+                    "id": "csf-ai-tools",
+                    "title": "Dedicated tracks for Claude Code, Codex, Cursor, Copilot & Gemini CLI",
+                    "blurb": "AI coding tools are interview material now. Five dedicated tracks - Claude Code, Codex, Cursor, GitHub Copilot, and Gemini CLI - cover 950 questions on agent modes, MCP, rules files, sandboxing, and certification paths. 🤖",
+                    "screenshot": "brands/moonwhalemedia/assets/csf-tracks/github-copilot.png",
+                    "capture_url": "https://coderstudyflow.test/technologies/github-copilot"
+                },
+                {
+                    "id": "csf-audit",
+                    "title": "Every code question was executed on a real runtime before you see it",
+                    "blurb": "The question bank is independently audited - code-bearing questions aren't proofread, they're RUN: PHP snippets on PHP 8.4, JavaScript on Node 24, Python on 3.14, SQL against a live MySQL. Version claims are checked against the official docs and RFCs. ✅"
+                },
+                {
+                    "id": "csf-releases",
+                    "title": "Release builds - the content you buy stays yours forever",
+                    "blurb": "The catalog ships in additive release builds: every build includes everything from all earlier builds, and nothing is ever removed. Corrections ship free, subscriptions always get the latest build, and Lifetime owners keep their build forever with 50% off each upgrade. 🔒"
+                },
+                {
+                    "id": "csf-a11y",
+                    "title": "Keyboard-first by design - take the entire test without a mouse",
+                    "blurb": "The test screen is built to WCAG: arrow keys move through a true radiogroup, a live region announces each new question, and Enter locks in your pick. Even the drag-and-drop sidebar reorder has a keyboard alternative. Accessibility isn't an afterthought here. ♿"
                 }
             ]
         },
         {
             "key": "newsroomflow",
             "name": "NewsroomFlow",
-            "wordmark": ["Newsroom", "Flow"],
+            "wordmark": [
+                "Newsroom",
+                "Flow"
+            ],
             "accent": "#2563eb",
             "url": "https://newsroomflow.app",
-            "tagline": "Your newsroom, in flow",
+            "tagline": "Build Your Own Newsroom",
             "screenshot": "brands/moonwhalemedia/assets/newsroomflow-home.png",
             "capture_url": "https://newsroomflow.test",
-            "hashtags": "#news #publishing #media",
+            "hashtags": "#NewsroomFlow #NewsApp #StayInformed",
             "promos": [
                 {
                     "id": "nrf-overview",
-                    "title": "Your newsroom, in flow",
-                    "blurb": "Stay on top of the stories that matter - NewsroomFlow brings your news together in one clean, fast reading experience. 📰"
+                    "title": "Build Your Own Newsroom",
+                    "blurb": "Stop scrolling everyone else's front page. NewsroomFlow lets you follow only the topics YOU care about and delivers the day's most popular headlines on each one, every morning. Your news, your newsroom. 📰"
                 },
                 {
-                    "id": "nrf-signal",
-                    "title": "Less doomscrolling. More signal.",
-                    "blurb": "Less doomscrolling, more signal. NewsroomFlow keeps your daily read organized and readable. ☕"
+                    "id": "nrf-topic-feeds",
+                    "title": "12 Top Stories Per Topic. Every Morning. Zero Noise.",
+                    "blurb": "Every topic you follow holds the 12 most popular fresh stories, refreshed daily with a prepend-new, drop-oldest rule. See exactly what a live feed looks like in our public World News demo. 🌍",
+                    "screenshot": "brands/moonwhalemedia/assets/newsroomflow-world-news.png",
+                    "capture_url": "https://newsroomflow.test/world-news"
+                },
+                {
+                    "id": "nrf-free-tier",
+                    "title": "Follow 2 Topics Free. Forever.",
+                    "blurb": "No trial clock, no credit card. The Free plan gives you 2 full topic feeds with daily refreshes, read/unread tracking, and reading streaks. Start building your newsroom today. ✅",
+                    "screenshot": "brands/moonwhalemedia/assets/newsroomflow-pricing.png",
+                    "capture_url": "https://newsroomflow.test/pricing"
+                },
+                {
+                    "id": "nrf-your-schedule",
+                    "title": "Your News Arrives at the Hour You Choose",
+                    "blurb": "6 AM riser or midnight reader? Pick your refresh hour and timezone, and NewsroomFlow rebuilds every feed right on your schedule. News that fits your day, not the other way around. ⏰"
+                },
+                {
+                    "id": "nrf-local-news",
+                    "title": "Real Local News for Your City, State, or Country",
+                    "blurb": "Add your area and get headlines from curated local outlets covering ~95 metros, all 50 states, and 20 countries. Free includes one local area; Pro follows as many places as you love. 🏙️"
+                },
+                {
+                    "id": "nrf-ai-briefing",
+                    "title": "Your AI Daily Briefing, Written While You Sleep",
+                    "blurb": "Pro members wake up to a fresh AI-written briefing that pulls the through-line out of everything their topics served overnight. One page, fully caught up. ☕"
+                },
+                {
+                    "id": "nrf-tldr",
+                    "title": "Too Long? TL;DR Any Article With One Click",
+                    "blurb": "Hit 'TL;DR this' on any story and Pro's AI hands you the gist in seconds, so you can decide what deserves a full read. Skim smarter, not harder. ⚡"
+                },
+                {
+                    "id": "nrf-watchlist",
+                    "title": "Keyword Watchlist: Never Miss the Story You're Waiting For",
+                    "blurb": "Tracking a company, a team, a name? Add it to your Pro watchlist and matching stories get pinned to the top of your feed - with an optional priority push on mobile. 🎯"
+                },
+                {
+                    "id": "nrf-mutes-blocks",
+                    "title": "Mute Keywords. Block Publishers. Curate Ruthlessly.",
+                    "blurb": "Your newsroom, your editorial standards. Pro lets you mute keywords per topic and block publishers account-wide, so the noise never makes the front page again. 🔇"
+                },
+                {
+                    "id": "nrf-search-archive",
+                    "title": "That Story From Last Week? Still Here.",
+                    "blurb": "Feeds rotate daily, but Pro keeps rotated-out stories in a browsable archive and gives you search across every feed and saved article. Nothing you read ever truly disappears. 🔎"
+                },
+                {
+                    "id": "nrf-save-later",
+                    "title": "Save Now, Read Later",
+                    "blurb": "Spotted something great at the wrong moment? Bookmark any article to your Saved list and come back when you actually have the time. Pro keeps your reading list waiting. 🔖"
+                },
+                {
+                    "id": "nrf-digest",
+                    "title": "One Email a Day With Everything That Matters",
+                    "blurb": "The Pro daily digest lands right after your feeds refresh, with per-topic selection and a new-headlines-only mode. And unsubscribing is honest: one click, done. 📬"
+                },
+                {
+                    "id": "nrf-streaks",
+                    "title": "Keep Your Reading Streak Alive - And Brag About It",
+                    "blurb": "NewsroomFlow tracks your reading streak on every plan, complete with shareable streak cards for social. How many days can you keep up with your world? 🔥"
+                },
+                {
+                    "id": "nrf-mobile",
+                    "title": "One Newsroom. Web, Android, and iOS.",
+                    "blurb": "NewsroomFlow is built as one backend with native Android and iOS apps alongside the web dashboard - same topics, same watchlist, plus daily push notifications on mobile. 📱"
+                },
+                {
+                    "id": "nrf-pro-pricing",
+                    "title": "Go Pro: $4.99/mo, $49.99/yr, or $149.99 Once - Forever",
+                    "blurb": "Unlimited topics, subtopics, AI briefings and summaries, watchlist, search, archive, and more. Prefer to never see a renewal email? The Lifetime plan is one payment, yours forever. 💙",
+                    "screenshot": "brands/moonwhalemedia/assets/newsroomflow-pricing.png",
+                    "capture_url": "https://newsroomflow.test/pricing"
                 }
             ]
         },
         {
             "key": "astrologerflow",
             "name": "AstrologerFlow",
-            "wordmark": ["Astrologer", "Flow"],
+            "wordmark": [
+                "Astrologer",
+                "Flow"
+            ],
             "accent": "#8b5cf6",
             "url": "https://astrologerflow.app",
-            "tagline": "Your stars, beautifully read",
+            "tagline": "Your Cosmic & Feng Shui Blueprint",
             "screenshot": "brands/moonwhalemedia/assets/astrologerflow-home.png",
             "capture_url": "https://astrologerflow.test",
-            "hashtags": "#astrology #horoscope #zodiac",
+            "hashtags": "#astrology #horoscope #tarot #fengshui #birthchart",
             "promos": [
                 {
                     "id": "af-overview",
-                    "title": "Your stars, beautifully read",
-                    "blurb": "Daily horoscopes, birth charts, and readings - AstrologerFlow puts the whole sky in your pocket. ✨"
+                    "title": "Your Cosmic & Feng Shui Blueprint, All in One Place",
+                    "blurb": "Western astrology, Vedic, Chinese BaZi and Feng Shui - four traditions in one beautiful app, on web, Android and iOS. Start free with your Kua number, daily horoscope and lucky directions. ✨"
                 },
                 {
-                    "id": "af-week",
-                    "title": "What are the stars saying about YOUR week?",
-                    "blurb": "What are the stars saying about YOUR week? Find out on AstrologerFlow. 🌙"
+                    "id": "af-feng-shui-blueprint",
+                    "title": "Discover Your Feng Shui Blueprint - Free",
+                    "blurb": "From just your birthday, AstrologerFlow reveals your Kua number, your Chinese zodiac and element, and the four compass directions that draw wealth, health and love your way. Free forever. 🧭",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-features.png",
+                    "capture_url": "https://astrologerflow.test/features"
+                },
+                {
+                    "id": "af-daily-horoscope",
+                    "title": "Daily Horoscopes for All 12 Signs, Refreshed Every Day",
+                    "blurb": "Your daily horoscope comes with a live cosmic-events strip: today's moon phase and a Mercury-retrograde alert right where you need it. Pro members get theirs personalized to their own birth chart. ☀️",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-horoscope.png",
+                    "capture_url": "https://astrologerflow.test/horoscope"
+                },
+                {
+                    "id": "af-moon-calendar",
+                    "title": "Follow the Moon Through Every Phase",
+                    "blurb": "A full lunar calendar with every new moon, full moon and phase in between - month by month, a year ahead. Never miss a full moon again. 🌕",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-moon.png",
+                    "capture_url": "https://astrologerflow.test/moon"
+                },
+                {
+                    "id": "af-retrogrades",
+                    "title": "Is Mercury in Retrograde Right Now",
+                    "blurb": "Stop guessing. AstrologerFlow tracks retrogrades for all 8 planets - Mercury through Pluto - with live status and upcoming dates, free. 🪐",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-retrogrades.png",
+                    "capture_url": "https://astrologerflow.test/retrogrades"
+                },
+                {
+                    "id": "af-eclipses",
+                    "title": "Never Be Surprised by an Eclipse Again",
+                    "blurb": "Solar and lunar eclipses, tracked for you with dates and details in our free eclipse tracker. The sky has a schedule - now you have it too. 🌘",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-eclipses.png",
+                    "capture_url": "https://astrologerflow.test/eclipses"
+                },
+                {
+                    "id": "af-big3-calculators",
+                    "title": "Find Your Big 3: Sun, Moon & Rising Sign",
+                    "blurb": "Free calculators reveal your moon sign and rising sign from your birth time and place - the two signs that explain why you're more than your sun sign. Your Big 3 is waiting. 🌙",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-rising-sign.png",
+                    "capture_url": "https://astrologerflow.test/rising-sign-calculator"
+                },
+                {
+                    "id": "af-saturn-return",
+                    "title": "When Is Your Saturn Return",
+                    "blurb": "That famous late-twenties reckoning has an exact date - and our free Saturn Return calculator finds yours. See when Saturn comes home to your natal sky and what it means. 🪐",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-saturn-return.png",
+                    "capture_url": "https://astrologerflow.test/saturn-return"
+                },
+                {
+                    "id": "af-tarot",
+                    "title": "All 78 Tarot Cards, Hand-Illustrated in the Aurora Deck",
+                    "blurb": "Explore the complete tarot library free, pull your Card of the Day and build a streak, then go Pro for full five-card guided spreads on love, career, money and more. 🃏",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-tarot.png",
+                    "capture_url": "https://astrologerflow.test/tarot"
+                },
+                {
+                    "id": "af-iching",
+                    "title": "Cast the I Ching - the 3,000-Year-Old Oracle, Free",
+                    "blurb": "Ask your question and cast a hexagram the traditional way, with all 64 hexagrams explained in our free I Ching library. Ancient wisdom, one tap away. ☯️",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-i-ching.png",
+                    "capture_url": "https://astrologerflow.test/i-ching"
+                },
+                {
+                    "id": "af-compatibility",
+                    "title": "Are Your Signs Written in the Stars",
+                    "blurb": "Browse all 78 zodiac pairings free, then unlock full synastry with Pro: romance, communication, emotion and staying power scored between any two saved charts, with a downloadable PDF report. 💞",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-compatibility.png",
+                    "capture_url": "https://astrologerflow.test/zodiac-compatibility"
+                },
+                {
+                    "id": "af-natal-chart",
+                    "title": "Your Full Natal Chart, Accurate to the Arc-Minute",
+                    "blurb": "Pro maps your whole sky - all ten planets across twelve houses with every aspect - validated to within one arc-minute of Swiss Ephemeris. Written for you and no one else. ☉",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-features.png",
+                    "capture_url": "https://astrologerflow.test/features"
+                },
+                {
+                    "id": "af-three-traditions",
+                    "title": "Western, Vedic & Chinese BaZi - Three Charts, One Birthday",
+                    "blurb": "Go beyond one tradition: Pro reads your birth data through a Western natal chart, a Vedic sidereal chart with nakshatras and dashas, and the Chinese Four Pillars of Destiny. Same sky, three ancient lenses. 🔮",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-how-it-works.png",
+                    "capture_url": "https://astrologerflow.test/how-it-works"
+                },
+                {
+                    "id": "af-year-ahead",
+                    "title": "Your Best & Worst Days of the Year, Ranked",
+                    "blurb": "Pro scores every single day of any year against your natal chart - for love, career, money and health - and bundles it into a downloadable Year Ahead PDF. Plan life with the sky on your side. 📅",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-features.png",
+                    "capture_url": "https://astrologerflow.test/features"
+                },
+                {
+                    "id": "af-pricing",
+                    "title": "Start Free - Go Pro from $4.99 a Month",
+                    "blurb": "The Feng Shui blueprint, daily horoscopes, sky trackers and calculators are free forever. Unlock the full astrology suite with Pro: $4.99 monthly, $49.99 yearly (two months free), or $149.99 once for lifetime access. ✨",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-pricing.png",
+                    "capture_url": "https://astrologerflow.test/pricing"
+                },
+                {
+                    "id": "af-guided-readings",
+                    "title": "Guided Readings: 8 Life Questions, 2 Ways to Ask",
+                    "blurb": "Career, love, money, health, family, purpose, a big decision, or the year ahead - pick your topic, then choose your lens: an astrology reading grounded in your own natal chart and today's transits, or a 5-card tarot spread interpreted position by position. Free members even get one full reading every month. 🔮",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-readings.png",
+                    "capture_url": "https://astrologerflow.test/readings"
+                },
+                {
+                    "id": "af-cosmic-weather",
+                    "title": "Cosmic Weather: What Is Hitting Your Chart Right Now",
+                    "blurb": "A live snapshot of today's transits to YOUR natal chart - favourable, tense, or quiet bands across love, career, money, health, and overall, plus the ~6 strongest active aspects with the exact orb and why each one matters. Your personal forecast, down to the degree. ⚡"
+                },
+                {
+                    "id": "af-ask-your-chart",
+                    "title": "Ask Your Chart Anything - AI Answers From Your Real Placements",
+                    "blurb": "Type a question - 'what does my chart say about my career?' - and get a personalized answer grounded in your actual Sun, Moon, Rising, and planet placements, powered by Claude. Like texting an astrologer who has already memorized your chart. 💬"
+                },
+                {
+                    "id": "af-jupiter-return",
+                    "title": "Jupiter Return Tracker: Your 12-Year Luck Cycle",
+                    "blurb": "Jupiter circles back to its natal degree roughly every 12 years - the classic 'luck reset.' See every return of your life with dates and ages, plus a twist no other calculator has: flags for returns that land in your own Chinese zodiac year (Ben Ming Nian), since Jupiter IS the ancient Year Star. 🍀",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-jupiter-return.png",
+                    "capture_url": "https://astrologerflow.test/jupiter-return"
+                },
+                {
+                    "id": "af-zodiac-profiles",
+                    "title": "All 12 Zodiac Signs, Profiled in Depth",
+                    "blurb": "A dedicated page for every sign - glyph, element, keywords, strengths, challenges, and a full personality profile - refreshed every single day with that sign's current horoscope. Bookmark yours, then go look up your ex. ♈",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-zodiac.png",
+                    "capture_url": "https://astrologerflow.test/zodiac"
+                },
+                {
+                    "id": "af-chinese-zodiac-animals",
+                    "title": "Year of the Dragon? All 12 Chinese Zodiac Animals Explained",
+                    "blurb": "Rich profiles for all 12 animals with their fixed elements, keywords, allies (trines), and clashes - plus a year table from 1936 to 2031 that uses the true Li Chun solar-year cutoff, so late-January birthdays finally get the right animal. 🐉",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-chinese-zodiac.png",
+                    "capture_url": "https://astrologerflow.test/chinese-zodiac"
+                },
+                {
+                    "id": "af-flying-stars",
+                    "title": "Annual Flying Stars: Your Home's Luck Map for the Year",
+                    "blurb": "A 3x3 palace grid showing which of the 9 stars lands in each direction of your home this year - which corners are auspicious, which are afflicted, and the traditional cure or remedy for every one. Feng Shui that tells you where to put the plant. 🪴"
+                },
+                {
+                    "id": "af-daily-luck",
+                    "title": "Your Daily Feng Shui Luck: Direction, Color, Number, Stone",
+                    "blurb": "Every day, a fresh rotation through your own auspicious attributes: which of your four lucky directions to face today, a color to wear, a number, a gemstone, and one direction to avoid - all derived from your personal Kua. Free, every single day. 🧭",
+                    "screenshot": "brands/moonwhalemedia/assets/astrologerflow-horoscope.png",
+                    "capture_url": "https://astrologerflow.test/horoscope"
+                },
+                {
+                    "id": "af-personal-daily",
+                    "title": "A Daily Horoscope Computed From YOUR Chart, Not Just Your Sign",
+                    "blurb": "Pro upgrades the daily from 1-of-12 to 1-of-1: today's transits are scored against your own natal Moon, Sun, and planets for a reading only you could receive. Same stars, your sky. ✨"
+                },
+                {
+                    "id": "af-moon-journal",
+                    "title": "Moon Journal: Does the Full Moon Actually Affect You?",
+                    "blurb": "Log your mood each day and AstrologerFlow plots it against the lunar phase - a 60-day chart, a phase-by-phase average of your entire history, and your personal best and worst moon phases, backed by your own data. Searchable notes back to any date you remember. 🌕"
+                },
+                {
+                    "id": "af-family-astrology",
+                    "title": "The Family Page: Your Whole Household, Side by Side",
+                    "blurb": "Everyone you've saved in one view - each person's Kua number, best and worst directions, Chinese zodiac, and Big 3 - plus how the household fits together: shared lucky directions, zodiac affinities, and the clashes to know about before seating people at dinner. 🏡"
+                },
+                {
+                    "id": "af-your-people",
+                    "title": "Your People: Save Every Birth Chart That Matters",
+                    "blurb": "Store birth details for family, friends, and partners once, then run any reading for any of them with one tap - no re-typing birth times ever. Free includes 1 saved profile; Pro makes it unlimited. 👥"
+                },
+                {
+                    "id": "af-cosmic-dashboard",
+                    "title": "Your Cosmic Dashboard: A Daily Home Base",
+                    "blurb": "Sign in to today's Card of the Day, your horoscope, your streak, your saved people and recent readings, and one-tap links to every tool - all rolled over at YOUR midnight, in your timezone. 🌠"
+                },
+                {
+                    "id": "af-card-streak",
+                    "title": "Keep the Streak Alive: Draw Your Card Every Day",
+                    "blurb": "Seeing your Card of the Day extends a daily streak - consecutive days build it, a missed day resets it, and your all-time best is tracked forever. A tiny daily ritual with real pull. 🔥"
+                },
+                {
+                    "id": "af-astrology-glossary",
+                    "title": "The Astrology Glossary: Signs, Planets & Houses Decoded",
+                    "blurb": "A beautiful reference library covering all 12 signs, every planet and luminary (Earth included), and all 12 houses - each with meaning, strengths, and challenges on illustrated glyph cards. Download the whole thing as a styled PDF and learn offline. 📖"
+                },
+                {
+                    "id": "af-reading-library",
+                    "title": "Your Private Library of Saved Readings",
+                    "blurb": "Save any guided reading or compatibility report and it lives in your personal library - revisit it anytime, re-download it as a PDF, and watch your own story accumulate reading by reading. 📚"
+                },
+                {
+                    "id": "af-pdf-exports",
+                    "title": "Take It With You: Styled PDF Reports for Everything Big",
+                    "blurb": "Your Year-Ahead forecast, compatibility reports, guided readings, and both glossaries all export as polished, printable PDFs - keep them, print them, or send one to the person the reading is about. 📥"
+                },
+                {
+                    "id": "af-email-digests",
+                    "title": "The Stars, Delivered: Three Free Email Rituals",
+                    "blurb": "Opt in to a personalized daily horoscope each morning, a weekly horoscope on any tier, and a daily Card of the Day email - every one with honest one-click unsubscribe. Your forecast finds you. 📫"
+                },
+                {
+                    "id": "af-home-widgets",
+                    "title": "Home-Screen Widgets: Your Sky at a Glance",
+                    "blurb": "Four widgets on both Android and iOS - today's horoscope for your sign, the current moon phase, retrograde status, and your personal daily - so the cosmos is one glance away without opening the app. 📱"
+                },
+                {
+                    "id": "af-mobile-apps",
+                    "title": "Native Android & iOS Apps - One Account, Pro Everywhere",
+                    "blurb": "Full native apps with every feature of the web: natal wheels drawn in real time, all three chart traditions, guided readings, forecasts, and widgets. One account syncs everything, and Pro unlocked anywhere is Pro unlocked everywhere. 🌌"
+                },
+                {
+                    "id": "af-unique-readings",
+                    "title": "No Two Readings Alike - Real Astronomy, Personal Prose",
+                    "blurb": "Positions come from a real VSOP87 ephemeris validated to within 1 arc-minute of the Swiss Ephemeris, then a per-user phrase engine (optionally refined by Claude) writes your reading - so two people with identical charts still get different words. Rigor underneath, poetry on top. 💫"
                 }
             ]
         },
         {
             "key": "filemanagerflow",
             "name": "FileManagerFlow",
-            "wordmark": ["FileManager", "Flow"],
-            "accent": "#0ea5e9",
+            "wordmark": [
+                "FileManager",
+                "Flow"
+            ],
+            "accent": "#4F46E5",
             "url": "https://filemanagerflow.app",
-            "tagline": "Your files, finally organized",
+            "tagline": "Privacy-first photo & file organizer",
             "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-home.png",
-            "capture_url": "https://filemanagerflow.test",
-            "hashtags": "#productivity #files #organization",
+            "capture_url": "http://filemanagerflow.test",
+            "hashtags": "#FileManagerFlow #PhotoOrganizer #PrivacyFirst #Declutter",
             "promos": [
                 {
                     "id": "fmf-overview",
-                    "title": "Your files, finally organized",
-                    "blurb": "Wrangle your files like a pro - FileManagerFlow makes organizing, finding, and managing your stuff actually pleasant. 🗂️"
+                    "title": "Your Photos. Your Folders. Your Device. Nothing Leaves It.",
+                    "blurb": "FileManagerFlow is the privacy-first photo and file organizer. Triage your whole gallery in tap-tap-tap rhythm and file every keeper exactly where you want it - all locally, with no cloud upload and no tracking. 📱"
                 },
                 {
-                    "id": "fmf-fast",
-                    "title": "Fast, clean, and built to keep you organized",
-                    "blurb": "The file manager you didn't know you needed. Fast, clean, and built to keep you organized. ⚡"
+                    "id": "fmf-custom-folders",
+                    "title": "Default Folders Are Lazy. Make Folders That Match Your Life.",
+                    "blurb": "Family photos here, work PDFs there, receipts in their own spot. Stop letting your phone decide - build destinations that mirror how you actually think. 🗂️"
+                },
+                {
+                    "id": "fmf-one-tap-filing",
+                    "title": "One-Tap Filing With Auto-Advance",
+                    "blurb": "Tap a folder and the queue moves to the next item automatically - no long-press, Move, navigate, confirm dance per file. Sort 200 photos in ten minutes. ⚡",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-ten-minute-windows",
+                    "title": "Clean Up 50 Photos While You Wait In Line",
+                    "blurb": "Stuck in traffic or standing in the checkout line? Those weird ten-minute windows are perfect for clearing out your gallery - right on your phone, in seconds. ⏱️"
+                },
+                {
+                    "id": "fmf-photos-and-files",
+                    "title": "Photos And Files In One Flow",
+                    "blurb": "Camera roll, screenshots, PDFs, scanned receipts, voice memos - triage them all from one app instead of bouncing between Gallery and Files. 🧹",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-privacy",
+                    "title": "We Never See Your Photos. Ever.",
+                    "blurb": "Every move happens on your device through the OS's own file frameworks. No upload of your photos, no analytics SDKs you didn't agree to. That's the whole point. 🔒",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-privacy.png",
+                    "capture_url": "http://filemanagerflow.test/privacy"
+                },
+                {
+                    "id": "fmf-duplicates",
+                    "title": "Find Duplicates With Content-Hash + Perceptual Matching",
+                    "blurb": "Pro's duplicate finder hunts down byte-identical copies and near-identical shots cluttering your library, with full delete and per-item undo. Reclaim that storage. 🔍",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-vault",
+                    "title": "The Privacy Vault: Passphrase-Locked, Encrypted, Yours",
+                    "blurb": "Encrypt sensitive files into a vault only your passphrase opens - the original is shredded from its source, and the vault auto-locks after 15 minutes idle. We never store or see your passphrase. 🔐",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-undo-history",
+                    "title": "Undo Any Of Your Last 50 Actions",
+                    "blurb": "Deletes go to a local trash, so even a mistake you noticed yesterday is recoverable. Pro reverses any of your last 50 moves or deletes - your stock file app gives you one shot. ↩️",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-sync",
+                    "title": "Your Folders And Rules, Synced Across Every Device",
+                    "blurb": "Set up your destinations once and Pro's cross-device sync carries them to every phone, tablet, and computer you sign in on. Organize anywhere, stay consistent everywhere. 🔄",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-pricing.png",
+                    "capture_url": "http://filemanagerflow.test/pricing"
+                },
+                {
+                    "id": "fmf-sorting-rules",
+                    "title": "Sorting Rule Suggestions Do The Thinking For You",
+                    "blurb": "FileManagerFlow suggests rules by extension, filename, or date - so screenshots, PDFs, and last summer's photos practically file themselves. Free and Pro alike. 🤖",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-guide.png",
+                    "capture_url": "http://filemanagerflow.test/guide"
+                },
+                {
+                    "id": "fmf-family",
+                    "title": "One Lifetime Plan. Five Family Members. Every Device.",
+                    "blurb": "The Pro Lifetime Plan covers up to 5 family members on Android, iOS, Windows, macOS, and Linux. Invite them by email and Pro unlocks everywhere they sign in. 👨‍👩‍👧‍👦",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-pricing.png",
+                    "capture_url": "http://filemanagerflow.test/pricing"
+                },
+                {
+                    "id": "fmf-free-tier",
+                    "title": "Genuinely Free. Not A Crippled Demo. No Card Required.",
+                    "blurb": "Triage your entire library, delete and skip without limits, and file into 3 folders of your choosing with 10 filings a day - all for $0. Upgrade only if you outgrow it. 🆓",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-pricing.png",
+                    "capture_url": "http://filemanagerflow.test/pricing"
+                },
+                {
+                    "id": "fmf-lifetime",
+                    "title": "Pay $149 Once. Own Pro Forever.",
+                    "blurb": "The Pro Lifetime Plan is one payment for every Pro feature in the current version plus all its updates - no recurring billing, and at least 50% loyalty discount if a v2 ever ships. 💎",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-pricing.png",
+                    "capture_url": "http://filemanagerflow.test/pricing"
+                },
+                {
+                    "id": "fmf-beta",
+                    "title": "Get In Early: Join The FileManagerFlow Beta",
+                    "blurb": "Want first access on Android? The beta program is open - grab the Play Store opt-in and help shape the launch. 🚀",
+                    "screenshot": "brands/moonwhalemedia/assets/filemanagerflow-beta.png",
+                    "capture_url": "http://filemanagerflow.test/beta"
                 }
             ]
         },
         {
             "key": "myemergencyscreen",
             "name": "MyEmergencyScreen",
-            "wordmark": ["MyEmergency", "Screen"],
-            "accent": "#ef4444",
+            "wordmark": [
+                "MyEmergency",
+                "Screen"
+            ],
+            "accent": "#C0392B",
             "url": "https://myemergencyscreen.com",
-            "tagline": "The lock screen that could save your life",
+            "tagline": "Your Emergency Info, on Your Phone Lock Screen",
             "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-home.png",
-            "capture_url": null,
-            "hashtags": "#safety #emergency #health",
+            "capture_url": "https://myemergencyscreen.test",
+            "hashtags": "#EmergencyPreparedness #MedicalID #FirstResponders #SafetyFirst",
             "promos": [
                 {
                     "id": "mes-overview",
-                    "title": "The lock screen that could save your life",
-                    "blurb": "If something happened to you today, could first responders reach your emergency contacts? MyEmergencyScreen puts your critical info right on your lock screen. 🚨"
+                    "title": "Your Emergency Info, Right on Your Lock Screen",
+                    "blurb": "If you couldn't speak for yourself, could first responders learn your name, allergies, and who to call? My Emergency Screen puts your critical medical info on your phone lock screen - no unlock required. Set yours up free. 📱"
                 },
                 {
-                    "id": "mes-info",
-                    "title": "Critical info, visible when it matters most",
-                    "blurb": "Allergies, conditions, emergency contacts - visible to the people who need them, exactly when they need them. Set it up in minutes. ❤️"
+                    "id": "mes-no-unlock",
+                    "title": "No Passcode. No App. No Delay.",
+                    "blurb": "Your photo, name, emergency contact, and a tap-to-call button are visible the instant someone picks up your phone. When seconds count, responders shouldn't have to guess your passcode. ⏱️"
+                },
+                {
+                    "id": "mes-ems-qr",
+                    "title": "One QR Scan Opens Your Emergency Page",
+                    "blurb": "Every profile gets a unique MES-ID and QR code. A medic scans it and instantly sees your allergies, medications, conditions, and blood type - no app needed on their end, and every access is logged. 🔍",
+                    "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-ems-demo.png",
+                    "capture_url": "https://myemergencyscreen.test/ems/PWZ7Q9PU"
+                },
+                {
+                    "id": "mes-free-tier",
+                    "title": "The Essentials Are Free. Forever.",
+                    "blurb": "Name, photo, an emergency contact, blood type, and organ donor status on your lock screen - free. Not a trial, not a teaser. Because basic emergency readiness shouldn't cost a dime. ❤️",
+                    "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-pricing.png",
+                    "capture_url": "https://myemergencyscreen.test/pricing"
+                },
+                {
+                    "id": "mes-readiness-score",
+                    "title": "How Ready Are You? There's a Score for That",
+                    "blurb": "Your Readiness Score grades your emergency profile 0-100 with a simple checklist - photo added, contact saved, screen tested, info reviewed. Hit 100% and know you're actually covered. ✅"
+                },
+                {
+                    "id": "mes-test-screen",
+                    "title": "Test Your Screen Before You Need It",
+                    "blurb": "Scan your own QR code once and your profile flips to Tested - so you know the system works before an emergency does. Scan alerts can even text your contacts whenever your screen is opened for real. 🛡️"
+                },
+                {
+                    "id": "mes-wallet-card",
+                    "title": "Phone Dead? Your Wallet Card Isn't",
+                    "blurb": "Print a free wallet card and fridge card, or add a Google Wallet pass, so your essentials travel with you even if your phone is lost, dead, or left behind. Backup plans have backup plans. 💳"
+                },
+                {
+                    "id": "mes-stickers",
+                    "title": "QR Stickers for Helmets, Visors, and Backpacks",
+                    "blurb": "Print a free sticker sheet in three sizes and put your emergency QR code where responders will look: bike helmet, car visor, kid's backpack, the fridge. Scan it, see your info. 🚲"
+                },
+                {
+                    "id": "mes-heads-up",
+                    "title": "Give Your Emergency Contact a Heads-Up",
+                    "blurb": "One tap sends your emergency contact a text asking them to save the number - so when the call comes, they answer instead of screening an unknown caller. Small step, huge difference. 📞"
+                },
+                {
+                    "id": "mes-lifeline",
+                    "title": "Lifeline Keeps Calling Until Someone Answers",
+                    "blurb": "When your emergency screen is scanned, Lifeline texts your contacts one at a time and keeps escalating until someone confirms they're on it - with one-tap acknowledgment and location sharing for responders. Your call for help never dead-ends. 🆘"
+                },
+                {
+                    "id": "mes-family",
+                    "title": "One Account. Your Whole Family Covered.",
+                    "blurb": "Pro manages up to 6 emergency profiles - kids, parents, anyone you care for - each with their own lock screen, QR code, and medical record. Protect the whole household for $4.99/month. 👪",
+                    "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-pricing.png",
+                    "capture_url": "https://myemergencyscreen.test/pricing"
+                },
+                {
+                    "id": "mes-binder",
+                    "title": "The Emergency Binder: Your Whole Record, Printable",
+                    "blurb": "Pro's Emergency Binder exports your complete record - allergies, meds, conditions, surgical history, devices, contacts, care team - as one print-ready document for school forms, camp, travel, and doctor visits. 📄"
+                },
+                {
+                    "id": "mes-ems-languages",
+                    "title": "Responders Can Read It in English, Spanish, or French",
+                    "blurb": "The emergency page has a language toggle any responder can flip - EN, ES, or FR - so a language barrier never stands between you and the right care. Free on every profile. 🌍"
+                },
+                {
+                    "id": "mes-guides",
+                    "title": "Free Preparedness Guides, Written for Real Life",
+                    "blurb": "First aid kit checklists, 72-hour kits, medication list templates, what EMS actually looks for, and emergency planning for kids and aging parents - all free in our guides hub. 📚",
+                    "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-guides.png",
+                    "capture_url": "https://myemergencyscreen.test/guides"
+                },
+                {
+                    "id": "mes-privacy",
+                    "title": "Encrypted. Never Sold. You Decide What Shows.",
+                    "blurb": "Your medical data is encrypted at rest and in transit, never sold or shared with advertisers, and you control exactly what appears on your screen. Safety shouldn't cost you your privacy. 🔒",
+                    "screenshot": "brands/moonwhalemedia/assets/myemergencyscreen-about.png",
+                    "capture_url": "https://myemergencyscreen.test/about"
                 }
             ]
         },
         {
             "key": "thecardbackcantina",
             "name": "The Cardback Cantina",
-            "wordmark": ["Cardback ", "Cantina"],
-            "accent": "#f97316",
+            "wordmark": [
+                "The Cardback ",
+                "Cantina"
+            ],
+            "accent": "#2563eb",
             "url": "https://thecardbackcantina.com",
-            "tagline": "Where collectors gather",
+            "tagline": "Toy & Comic Catalog + Collection Tracker",
             "screenshot": "brands/moonwhalemedia/assets/thecardbackcantina-home.png",
-            "capture_url": "https://thecardbackcantina.test",
-            "hashtags": "#tradingcards #collecting #collectors",
+            "capture_url": null,
+            "_notes": "Dev site currently 500s on every page - capture_url disabled so this product stays out of rotation until the app is fixed and a real screenshot exists.",
+            "hashtags": "#ActionFigures #ToyCollector #ComicCollecting #Collectibles",
             "promos": [
                 {
                     "id": "tcc-overview",
-                    "title": "Where collectors gather",
-                    "blurb": "Collectors, this one's for you - checklists, sets, and the tools to track your collection at The Cardback Cantina. 🃏"
+                    "title": "Every Figure. Every Issue. One Cantina.",
+                    "blurb": "The Cardback Cantina is a structured catalog of 200,000+ action figures and over 2.1 million comic issues - plus a collection tracker that shows exactly what you own and what you're missing. Catalog, track, and share for free. 🤠"
                 },
                 {
-                    "id": "tcc-track",
-                    "title": "Know what you have. Know what you're hunting.",
-                    "blurb": "Know exactly what you have and exactly what you're hunting. The Cardback Cantina keeps your collection organized. 🔍"
+                    "id": "tcc-toy-catalog",
+                    "title": "208,548 Toys. 2,370 Product Lines. 478 Makers.",
+                    "blurb": "From vintage cardbacks to modern collectibles, browse one of the most exhaustive structured toy catalogs ever built - organized by line, maker, and franchise so you can actually find things. 🔎"
+                },
+                {
+                    "id": "tcc-comics",
+                    "title": "Over 2.1 Million Comic Issues, Cataloged",
+                    "blurb": "Comic collectors get the same treatment: 2,121,039 issues you can browse, filter by franchise, and check into your collection one longbox at a time. 📚"
+                },
+                {
+                    "id": "tcc-build",
+                    "title": "Build Your Collection Like a Checklist",
+                    "blurb": "Pick a product line, check off everything you own, done. Bulk add turns cataloging a shelf of figures into minutes instead of an evening. ✅"
+                },
+                {
+                    "id": "tcc-completion",
+                    "title": "Know Your Completion Percentage - Free",
+                    "blurb": "Every line and franchise you collect gets live completion stats, so 'am I done with this wave?' always has an answer. Included on the free tier. 📊"
+                },
+                {
+                    "id": "tcc-gaps",
+                    "title": "Gap Analysis: See Exactly What You're Missing",
+                    "blurb": "Pro's gap analysis compares your collection against the full catalog and hands you the hunt list. No more spreadsheet archaeology before a toy show. 🎯"
+                },
+                {
+                    "id": "tcc-scan",
+                    "title": "Scan a Barcode. Add the Figure.",
+                    "blurb": "Pro members can UPC scan-to-add from a phone - point at the package, match the item, and it's in your collection. 📱"
+                },
+                {
+                    "id": "tcc-profile",
+                    "title": "Your Public Collector Profile + Shareable Card",
+                    "blurb": "Every collector gets a public profile page and a shareable collector card image, with follows and an activity feed to keep up with other collectors. Show off the shelf. 😎"
+                },
+                {
+                    "id": "tcc-showcases",
+                    "title": "Showcases: Curate Your Grails",
+                    "blurb": "Build themed showcases from your collection and share them anywhere - Pro members can even embed a live showcase widget on their own site or blog. ✨"
+                },
+                {
+                    "id": "tcc-insurance",
+                    "title": "An Insurance Report for Your Collection, in One Click",
+                    "blurb": "Pro generates a value-at-cost insurance report PDF plus a printable coffee-table catalog of everything you own. Your collection, documented like it deserves. 🗂️"
+                },
+                {
+                    "id": "tcc-labels",
+                    "title": "Printable QR Shelf Labels",
+                    "blurb": "Label your shelves and bins with printable QR codes that link straight back to your cataloged items. Pro turns your collection room into a museum. 🏷️"
+                },
+                {
+                    "id": "tcc-wrapped",
+                    "title": "Your Collecting Year, Wrapped",
+                    "blurb": "Pro's year-in-review Wrapped rolls up what you added, finished, and hunted all year into one satisfying recap. 🎁"
+                },
+                {
+                    "id": "tcc-backups",
+                    "title": "Your Data Is Yours: CSV Export + Backups",
+                    "blurb": "Pro includes one-click collection backups with restore and full CSV export. Track for years without ever feeling locked in. 🔒"
+                },
+                {
+                    "id": "tcc-community",
+                    "title": "Spot a Missing Item? Help Grow the Catalog",
+                    "blurb": "Anyone can suggest missing items and upvote submissions, and Pro members vote on the public roadmap. The catalog grows because collectors grow it. 🤝"
+                },
+                {
+                    "id": "tcc-pricing",
+                    "title": "Free Forever. Pro from $4.99. Lifetime $149.",
+                    "blurb": "Catalog, track up to 50 items, and share for free. Go Pro for $4.99/mo or $49/yr - or pay $149 once for Lifetime - to unlock unlimited tracking, gap analysis, reports, and an ad-free experience. 💙"
+                }
+            ]
+        },
+        {
+            "key": "socialstashflow",
+            "name": "SocialStashFlow",
+            "wordmark": [
+                "SocialStash",
+                "Flow"
+            ],
+            "accent": "#ef4444",
+            "url": "https://socialstashflow.app",
+            "tagline": "Every Favorite From Every Feed, In One Stash",
+            "screenshot": "brands/moonwhalemedia/assets/socialstashflow-home.png",
+            "capture_url": "https://socialstashflow.test",
+            "hashtags": "#SocialStashFlow #SaveForLater #Bookmarks #WatchLater",
+            "promos": [
+                {
+                    "id": "ssf-overview",
+                    "title": "Every Favorite From Every Feed, In One Stash",
+                    "blurb": "SocialStashFlow is your save-for-later library for the whole Internet. Paste any link and it becomes a beautiful, watchable card on your own board - sorted your way. Start free with 30 saves. 🔖"
+                },
+                {
+                    "id": "ssf-one-paste-stashing",
+                    "title": "Paste a Link. Get a Card. Done.",
+                    "blurb": "Hit the red Stash It button, paste any URL, and SocialStashFlow instantly builds a card with the title, preview, and thumbnail. Saving something for later has never been this fast. ⚡",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-how-it-works.png",
+                    "capture_url": "https://socialstashflow.test/how-it-works"
+                },
+                {
+                    "id": "ssf-every-platform",
+                    "title": "YouTube, TikTok, X, Instagram, Pinterest + Any Link On The Web",
+                    "blurb": "One stash for everything: YouTube videos, TikToks, X posts, Instagram and Facebook posts, Pinterest pins, Reddit threads, Twitch clips - or literally any page on the Internet. Stop losing favorites across eight different apps. 🌐"
+                },
+                {
+                    "id": "ssf-five-sections",
+                    "title": "Videos. Images. Websites. Posts. Notes.",
+                    "blurb": "Your stash comes pre-organized into five sections, so a saved recipe never gets buried under music videos. Everything you save lands exactly where it belongs. 🗂️"
+                },
+                {
+                    "id": "ssf-watch-inline",
+                    "title": "Watch Without Leaving Your Stash",
+                    "blurb": "YouTube and TikTok videos play right on the card - click the thumbnail, go fullscreen, or pop over to the platform when you want the full experience. Your watch-later list is finally watchable. ▶️",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-how-it-works.png",
+                    "capture_url": "https://socialstashflow.test/how-it-works"
+                },
+                {
+                    "id": "ssf-categories",
+                    "title": "Categories, Sub-Categories, and Drag-and-Drop",
+                    "blurb": "Build your own filing system: create categories in the sidebar, nest sub-categories one level deep (Music Videos -> Metallica), and drag cards straight onto a category to file them. Organizing actually feels good. 🎯",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-how-it-works.png",
+                    "capture_url": "https://socialstashflow.test/how-it-works"
+                },
+                {
+                    "id": "ssf-search",
+                    "title": "Find Anything In Your Stash In Seconds",
+                    "blurb": "Global search digs through titles, notes, and authors across your whole stash, and platform chips filter down to just YouTube, just TikTok, just X - one tap at a time. 🔍",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-how-it-works.png",
+                    "capture_url": "https://socialstashflow.test/how-it-works"
+                },
+                {
+                    "id": "ssf-favorites-watched",
+                    "title": "Star Your Favorites. Check Off What You've Watched.",
+                    "blurb": "Star a card to pin it in Favorites, then mark it watched when you're done - so your stash always knows what's next. Your queue, finally under control. ⭐",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-how-it-works.png",
+                    "capture_url": "https://socialstashflow.test/how-it-works"
+                },
+                {
+                    "id": "ssf-notes-tags",
+                    "title": "Add Notes and Tags to Anything You Save",
+                    "blurb": "Every card can carry your own notes and tags - why you saved it, who sent it, what to do with it. You can even stash standalone notes with an optional link or image. 📝"
+                },
+                {
+                    "id": "ssf-custom-covers",
+                    "title": "Make It Yours With Custom Cover Images",
+                    "blurb": "Don't like the auto-generated thumbnail? Upload your own cover image and give your board the exact look you want, card by card. 🎨"
+                },
+                {
+                    "id": "ssf-rich-embeds",
+                    "title": "Real Interactive Embeds, Not Dead Links",
+                    "blurb": "Stashed X, Facebook, YouTube, and TikTok posts render as live interactive embeds with automatic previews and thumbnails - your board looks like a media wall, not a list of blue links. 📺",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-pricing.png",
+                    "capture_url": "https://socialstashflow.test/pricing"
+                },
+                {
+                    "id": "ssf-free-plan",
+                    "title": "Start Free: 30 Saves On The House",
+                    "blurb": "The Free plan gets you 30 stashes, 5 categories, 5 custom covers, and every core feature - inline playback, search, favorites, drag-and-drop. No card required. 🆓",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-pricing.png",
+                    "capture_url": "https://socialstashflow.test/pricing"
+                },
+                {
+                    "id": "ssf-pro-plan",
+                    "title": "Go Pro: Unlimited Everything From $4.99/mo",
+                    "blurb": "Pro unlocks unlimited stashes, unlimited categories, nested sub-categories, unlimited cover uploads, and an ad-free experience. $4.99/mo, $49.99/yr, or $149.99 once for Lifetime - best value. 💎",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-pricing.png",
+                    "capture_url": "https://socialstashflow.test/pricing"
+                },
+                {
+                    "id": "ssf-dark-board",
+                    "title": "A Dark, Cinematic Board Built For Bingeing",
+                    "blurb": "SocialStashFlow's red-and-black board puts your saved videos front and center - big thumbnails, glowing accents, zero clutter. It's the watch-later list that actually makes you want to watch. 🍿"
+                },
+                {
+                    "id": "ssf-get-started",
+                    "title": "Your Free Stash Is 60 Seconds Away",
+                    "blurb": "Create a free account, paste your first link, and watch it turn into a card. Every favorite from every feed, finally in one place. 🚀",
+                    "screenshot": "brands/moonwhalemedia/assets/socialstashflow-register.png",
+                    "capture_url": "https://socialstashflow.test/register"
                 }
             ]
         }

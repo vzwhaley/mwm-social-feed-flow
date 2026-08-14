@@ -1,0 +1,668 @@
+[
+    {
+        "slug": "accessibility",
+        "name": "Accessibility",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "android",
+        "name": "Android",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "angular",
+        "name": "Angular",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "ansible",
+        "name": "Ansible",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "airflow",
+        "name": "Apache Airflow",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "cassandra",
+        "name": "Apache Cassandra",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "apache",
+        "name": "Apache HTTP Server",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "kafka",
+        "name": "Apache Kafka",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "spark",
+        "name": "Apache Spark",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "api-best-practices",
+        "name": "API Best Practices",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "argocd",
+        "name": "Argo CD",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "artificial-intelligence",
+        "name": "Artificial Intelligence",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "aspnet-core",
+        "name": "ASP.NET Core",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "auth",
+        "name": "Authentication & Authorization",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "aws",
+        "name": "AWS",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "azure",
+        "name": "Azure",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "bash-shell",
+        "name": "Bash / Shell Scripting",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "bootstrap",
+        "name": "Bootstrap",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "csharp",
+        "name": "C#",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "cpp",
+        "name": "C++",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "claude-code",
+        "name": "Claude Code",
+        "questions": 175,
+        "guides": 7
+    },
+    {
+        "slug": "cloudflare",
+        "name": "Cloudflare",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "codex",
+        "name": "Codex",
+        "questions": 175,
+        "guides": 7
+    },
+    {
+        "slug": "css",
+        "name": "CSS",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "cursor",
+        "name": "Cursor",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "data-science-engineering",
+        "name": "Data Science Engineering",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "data-structures-algorithms",
+        "name": "Data Structures & Algorithms",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "design-patterns",
+        "name": "Design Patterns",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "django",
+        "name": "Django",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "docker",
+        "name": "Docker",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "elk-stack",
+        "name": "ELK Stack",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "express",
+        "name": "Express",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "fastapi",
+        "name": "FastAPI",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "flask",
+        "name": "Flask",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "flutter",
+        "name": "Flutter",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "gemini-cli",
+        "name": "Gemini CLI",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "git",
+        "name": "Git",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "github-actions",
+        "name": "GitHub Actions",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "github-copilot",
+        "name": "GitHub Copilot",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "gitlab-ci",
+        "name": "GitLab CI/CD",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "go",
+        "name": "Go",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "google-cloud",
+        "name": "Google Cloud",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "grafana",
+        "name": "Grafana",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "graphql",
+        "name": "GraphQL",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "grpc",
+        "name": "gRPC",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "vault",
+        "name": "HashiCorp Vault",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "helm",
+        "name": "Helm",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "html",
+        "name": "HTML",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "hugging-face",
+        "name": "Hugging Face",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "ios",
+        "name": "iOS",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "istio",
+        "name": "Istio",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "java",
+        "name": "Java",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "javascript",
+        "name": "JavaScript",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "javascript-testing",
+        "name": "JavaScript Testing",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "jenkins",
+        "name": "Jenkins",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "junit",
+        "name": "JUnit",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "kotlin",
+        "name": "Kotlin",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "kubernetes",
+        "name": "Kubernetes",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "langchain",
+        "name": "LangChain",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "laravel",
+        "name": "Laravel",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "linux",
+        "name": "Linux",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "machine-learning",
+        "name": "Machine Learning",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "mlops",
+        "name": "MLOps",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "mongodb",
+        "name": "MongoDB",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "mysql",
+        "name": "MySQL",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "nestjs",
+        "name": "NestJS",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "networking",
+        "name": "Networking",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "nextjs",
+        "name": "Next.js",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "nginx",
+        "name": "Nginx",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "node",
+        "name": "Node.js",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "nuxt",
+        "name": "Nuxt",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "opentelemetry",
+        "name": "OpenTelemetry",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "oracle",
+        "name": "Oracle",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "php",
+        "name": "PHP",
+        "questions": 575,
+        "guides": 23
+    },
+    {
+        "slug": "phpunit",
+        "name": "PHPUnit",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "playwright",
+        "name": "Playwright",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "postgresql",
+        "name": "PostgreSQL",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "prometheus",
+        "name": "Prometheus",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "prompt-engineering",
+        "name": "Prompt Engineering",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "pytest",
+        "name": "pytest",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "python",
+        "name": "Python",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "pytorch",
+        "name": "PyTorch",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "r",
+        "name": "R",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "rag-vector-databases",
+        "name": "RAG & Vector Databases",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "react",
+        "name": "React",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "react-native",
+        "name": "React Native",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "redis",
+        "name": "Redis",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "regex",
+        "name": "Regular Expressions",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "ruby",
+        "name": "Ruby",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "rails",
+        "name": "Ruby on Rails",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "rust",
+        "name": "Rust",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "sass",
+        "name": "Sass",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "security",
+        "name": "Security",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "snowflake",
+        "name": "Snowflake",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "spring-boot",
+        "name": "Spring Boot",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "sql",
+        "name": "SQL",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "sql-server",
+        "name": "SQL Server",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "sqlite",
+        "name": "SQLite",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "svelte",
+        "name": "Svelte / SvelteKit",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "swift",
+        "name": "Swift",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "symfony",
+        "name": "Symfony",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "system-design",
+        "name": "System Design",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "tailwind",
+        "name": "Tailwind CSS",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "terraform",
+        "name": "Terraform",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "testing-tdd",
+        "name": "Testing & TDD",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "typescript",
+        "name": "TypeScript",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "unix",
+        "name": "Unix",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "vite",
+        "name": "Vite",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "vue",
+        "name": "Vue.js",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "websockets",
+        "name": "WebSockets",
+        "questions": 200,
+        "guides": 8
+    },
+    {
+        "slug": "wordpress",
+        "name": "WordPress",
+        "questions": 200,
+        "guides": 8
+    }
+]

@@ -47,12 +47,14 @@
         color: #0f172a; font-size: 34px; font-weight: 800;
     }
     .footer {
-        display: flex; align-items: baseline; justify-content: space-between;
-        padding: 26px 6px 0;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 22px 6px 0;
     }
     .mwm { color: #f8fafc; font-size: 24px; font-weight: 700; }
     .mwm-tag { color: #64748b; font-size: 16px; margin-top: 2px; }
+    .footer-right { display: flex; align-items: center; gap: 18px; }
     .site { color: #94a3b8; font-size: 22px; }
+    .mwm-logo { width: 88px; height: 88px; border-radius: 50%; box-shadow: 0 4px 18px rgba(0,0,0,.5); }
 </style>
 </head>
 <body>
@@ -76,7 +78,10 @@
             <div class="mwm">Moon Whale Media, LLC</div>
             <div class="mwm-tag">apps built with care</div>
         </div>
-        <div class="site">moonwhale.media</div>
+        <div class="footer-right">
+            <span class="site">moonwhale.media</span>
+            <img class="mwm-logo" src="{{MWM_LOGO_SRC}}" alt="">
+        </div>
     </div>
 </body>
 </html>
