@@ -204,8 +204,7 @@
                     "capture_url": "https://newsroomflow.test/pricing"
                 }
             ],
-            "logo": "brands/moonwhalemedia/assets/logos/newsroomflow.png",
-            "logo_chip": true
+            "logo": "brands/moonwhalemedia/assets/logos/newsroomflow.png"
         },
         {
             "key": "astrologerflow",
@@ -556,8 +555,7 @@
                     "capture_url": "http://filemanagerflow.test/beta"
                 }
             ],
-            "logo": "brands/moonwhalemedia/assets/logos/filemanagerflow.png",
-            "logo_chip": true
+            "logo": "brands/moonwhalemedia/assets/logos/filemanagerflow.png"
         },
         {
             "key": "myemergencyscreen",
