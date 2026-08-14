@@ -1,0 +1,32 @@
+{
+    "name": "CoderStudyFlow",
+    "site_url": "https://coderstudyflow.com",
+    "data_file": "data/coderstudyflow.json",
+    "state_file": "state/coderstudyflow.json",
+    "template": "brands/coderstudyflow/template.html",
+    "timezone": "America/New_York",
+    "networks": {
+        "facebook": true,
+        "x": true,
+        "instagram": false,
+        "linkedin": false
+    },
+    "caption": {
+        "lines": [
+            "🧠 {track} pop quiz — can you get it without peeking?",
+            "",
+            "Drop your answer below 👇 then check yourself at the link in the comments.",
+            "",
+            "Randomized {track} practice tests + study guides → {site_url}"
+        ],
+        "hashtags": "#programming #developer #codingquiz #interviewprep #certification",
+        "track_hashtag": true
+    },
+    "comment": "💡 See the correct answer (and the why) at CoderStudyFlow™ 👉 {answer_url}",
+    "limits": {
+        "question_max_chars": 200,
+        "choice_max_chars": 58,
+        "code_max_lines": 8,
+        "code_max_cols": 60
+    }
+}

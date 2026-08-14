@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    /* 1080x1080 social card - CoderStudyFlow terminal-amber house style.
+       Fonts: system monospace stack for the scaffold; swap in JetBrains Mono
+       as a base64 @font-face for pixel-parity with the site (see mwm-brand). */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1080px; height: 1080px; }
+    body {
+        background: #0f172a; /* ink */
+        font-family: Consolas, 'JetBrains Mono', 'Courier New', monospace;
+        display: flex; flex-direction: column;
+        padding: 56px 64px 40px;
+    }
+    .terminal {
+        flex: 1; display: flex; flex-direction: column;
+        background: #1e293b; border: 1px solid #334155; border-radius: 24px;
+        overflow: hidden; box-shadow: 0 24px 64px rgba(0,0,0,.45);
+    }
+    .bar {
+        display: flex; align-items: center; gap: 12px;
+        background: #0f172a; border-bottom: 1px solid #334155; padding: 22px 28px;
+    }
+    .dot { width: 20px; height: 20px; border-radius: 50%; }
+    .dot.r { background: #f43f5e; } .dot.y { background: #fbbf24; } .dot.g { background: #10b981; }
+    .bar .title {
+        flex: 1; text-align: center; color: #94a3b8; font-size: 26px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding: 0 16px;
+    }
+    .body { flex: 1; padding: 44px 52px; display: flex; flex-direction: column; }
+    .q { color: #fbbf24; font-size: 34px; line-height: 1.45; font-weight: bold; }
+    .q .prefix { color: #f59e0b; }
+    .code {
+        margin-top: 28px; background: #020617; border: 1px solid #1e293b; border-radius: 14px;
+        padding: 24px 28px; color: #e2e8f0; font-size: 26px; line-height: 1.5;
+        white-space: pre; overflow: hidden;
+    }
+    .choices { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
+    .choice { display: flex; gap: 18px; font-size: 30px; line-height: 1.4; color: #e2e8f0; }
+    .choice .letter { color: #38bdf8; font-weight: bold; }
+    .spacer { flex: 1; }
+    .prompt { margin-top: 30px; color: #64748b; font-size: 26px; }
+    .prompt .cursor { display: inline-block; width: 14px; height: 28px; background: #fbbf24; vertical-align: -4px; }
+    .footer {
+        display: flex; align-items: baseline; justify-content: space-between;
+        padding: 30px 8px 0;
+    }
+    .wordmark { font-size: 30px; font-weight: bold; color: #f8fafc; }
+    .wordmark .flow { color: #f59e0b; }
+    .wordmark .tm { font-size: 16px; vertical-align: super; }
+    .tagline { color: #64748b; font-size: 17px; margin-top: 2px; }
+    .url { color: #fbbf24; font-size: 26px; font-weight: bold; }
+</style>
+</head>
+<body>
+    <div class="terminal">
+        <div class="bar">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="title">{{TITLE}}</span>
+        </div>
+        <div class="body">
+            <p class="q"><span class="prefix">Q:</span> {{QUESTION}}</p>
+            {{CODE_BLOCK}}
+            <div class="choices">
+                {{CHOICES}}
+            </div>
+            <div class="spacer"></div>
+            <p class="prompt">$ csf answer --check &nbsp;<span class="cursor"></span></p>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <div class="wordmark">CoderStudy<span class="flow">Flow</span><span class="tm">&trade;</span></div>
+            <div class="tagline">by moon whale media, llc</div>
+        </div>
+        <div class="url">coderstudyflow.com</div>
+    </div>
+</body>
+</html>

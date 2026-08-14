@@ -1,0 +1,68 @@
+name: Social auto-post
+
+on:
+  schedule:
+    # 4x/day at 6a / 12p / 6p / 12a US Eastern.
+    # Cron is UTC: these are the EDT offsets (UTC-4). During EST (winter,
+    # UTC-5) posts land at 5a/11a/5p/11p local - acceptable drift, or adjust
+    # to 11,17,23,5 each November.
+    - cron: '0 10 * * *'
+    - cron: '0 16 * * *'
+    - cron: '0 22 * * *'
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Render + log only (no posting)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commits the updated state file back
+
+concurrency: social-post
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        brand: [coderstudyflow]
+    env:
+      CHROME_BIN: /usr/bin/google-chrome
+      FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+      FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+      X_API_KEY: ${{ secrets.X_API_KEY }}
+      X_API_SECRET: ${{ secrets.X_API_SECRET }}
+      X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+      X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+      LI_ORG_ID: ${{ secrets.LI_ORG_ID }}
+      LI_ACCESS_TOKEN: ${{ secrets.LI_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Post
+        run: node engine/run.mjs --brand ${{ matrix.brand }} ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Upload rendered image (run artifact)
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.brand }}-card
+          path: out/${{ matrix.brand }}-latest.png
+          retention-days: 14
+
+      - name: Commit state
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name "mwm-social-bot"
+          git config user.email "bot@moonwhale.media"
+          git add state/
+          git diff --cached --quiet || git commit -m "state: ${{ matrix.brand }} post $(date -u +%FT%TZ)"
+          git push
