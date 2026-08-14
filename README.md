@@ -49,7 +49,8 @@ node engine/run.mjs --brand coderstudyflow --dry-run
 
 Renders `out/coderstudyflow-latest.png` and writes
 `out/coderstudyflow-latest.json` (caption + comment + answer URL) without
-posting anywhere.
+posting anywhere. Note: dry-run never advances state/, so repeated dry-runs
+can pick the same product - real posts rotate via the committed history.
 
 ## Going live — credentials
 
@@ -58,8 +59,9 @@ Actions) — never commit them:
 
 | Secret | What / where |
 |---|---|
-| `FB_PAGE_ID` | The Facebook Page's numeric id (Page → About). |
+| `FB_PAGE_ID` | The Facebook Page's numeric id (Page → About). Default = the CoderStudyFlow page. |
 | `FB_PAGE_TOKEN` | Long-lived Page access token: Meta developer app (Business type) → Business Manager → System User → generate token with `pages_manage_posts`, `pages_read_engagement`. Posting to your OWN page needs no App Review. |
+| `MOONWHALEMEDIA_FB_PAGE_ID` / `MOONWHALEMEDIA_FB_PAGE_TOKEN` | Same recipe for the Moon Whale Media page. Any brand can be pointed at its own page via `<BRAND>_FB_PAGE_ID`-style secrets (brand slug uppercased, no dashes) — prefixed secrets beat the defaults. |
 | `X_API_KEY` / `X_API_SECRET` | X developer app (free tier: 500 posts/mo). |
 | `X_ACCESS_TOKEN` / `X_ACCESS_SECRET` | User access token/secret for the brand account (Read & Write). |
 | `IG_USER_ID` / `IG_ACCESS_TOKEN` | Later: Instagram Business account linked to the FB Page (same Meta app). |
@@ -72,15 +74,28 @@ secrets is skipped with a log line, never a crash.
 ## Repo layout
 
 ```
-brands/coderstudyflow/config.json   # schedule, networks, caption/hashtags, urls
-brands/coderstudyflow/template.html # 1080x1080 terminal-card template
-data/coderstudyflow.json            # exported question pool (private repo!)
-engine/run.mjs                      # orchestrator (pick -> render -> publish)
-engine/render.mjs                   # headless-Chrome HTML -> PNG
+BRAND_STYLE_GUIDE.md                  # per-site logo/font/accent reference
+brands/coderstudyflow/                # quiz campaign: config + terminal card
+brands/moonwhalemedia/                # promo campaign: config + product card
+brands/moonwhalemedia/assets/         # round MWM logo, Spantaran.ttf,
+                                      #   logos/<product>.png (official lockups),
+                                      #   page screenshots (+ csf-tracks/)
+data/coderstudyflow.json              # exported question pool (private repo!)
+data/mwm-products.json                # promo copy deck (all products)
+data/coderstudyflow-track-promos.json # generated: one promo per track
+data/coderstudyflow-tracks.json       # track manifest (from the product DB)
+engine/run.mjs                        # orchestrator (pick -> render -> publish)
+engine/render.mjs                     # headless-Chrome HTML -> PNG (+ MWM logo
+                                      #   and Spantaran data-URI injection)
 engine/publishers/{facebook,x,instagram,linkedin}.mjs
-state/coderstudyflow.json           # used-question hashes (committed by CI)
-out/                                # rendered images (gitignored)
+tools/capture-homes.mjs               # screenshot every promo page
+tools/generate-csf-track-promos.mjs   # regenerate per-track promos
+state/<brand>.json                    # cooldown history (committed by CI)
+out/                                  # rendered images (gitignored)
 ```
+
+House brand rules (fonts per product, Spantaran = company-only, dark-variant
+lockups) live in **BRAND_STYLE_GUIDE.md** — read it before touching templates.
 
 ## The promo campaign (Moon Whale Media page)
 
@@ -99,10 +114,11 @@ least-recently-posted one runs rather than nothing.
 
 **Screenshots:** `node tools/capture-homes.mjs` captures every product home +
 every promo-specific page (from `capture_url` — currently the Herd dev hosts,
-since the production domains are not live yet). Products with no reachable
-site are skipped automatically until their screenshot exists. **Recapture from
-the LIVE domains after each product launches** (dev captures can show the
-dev-only ad placeholder), then commit the new PNGs.
+since the production domains are not live yet). All 7 products currently have
+captures and are in rotation. Products with no reachable site are skipped
+automatically until their screenshot exists. **Recapture from the LIVE domains
+after each product launches** (dev captures can show the dev-only ad
+placeholder), then commit the new PNGs.
 
 Growing the deck = editing `data/mwm-products.json` — add promos freely; more
 promos means longer before anything repeats.
